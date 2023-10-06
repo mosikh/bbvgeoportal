@@ -14,7 +14,8 @@ app.get('/users',callName);
 
 function callName( req, res ) {
 var spawn = require('child_process').spawn;
-let command = spawn("php", [ "./index.php",req.query.db, req.query.shape, req.query.crm]);
+//let command = spawn("php", [ "./index.php",req.query.db, req.query.shape, req.query.crm]);
+let command = spawn("php", [ path.join(__dirname + '/index.php'),req.query.db, req.query.shape, req.query.crm]);
   command.stdout.pipe(res)
   command.on("close", function (data) {
     console.log("done writing");
