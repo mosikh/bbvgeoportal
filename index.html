@@ -317,8 +317,8 @@ L.control.coordinates({
 
 //----------------------------------------------------------------------------------
 var lyrpoly;
- //$.ajax({url:'http://localhost:3000/users?db=Sandbox4test_mh&shape=polygon&crm=Ausbaugebiete_NOK_trial',
- $.ajax({url:'https://bbvnewgeoportal.onrender.com/users?db=Sandbox4test_mh&shape=polygon&crm=Ausbaugebiete_NOK_trial',
+ $.ajax({url:'http://localhost:3000/users?db=Sandbox4test_mh&shape=polygon&crm=Ausbaugebiete_NOK_trial',
+ //$.ajax({url:'https://bbvnewgeoportal.onrender.com/users?db=Sandbox4test_mh&shape=polygon&crm=Ausbaugebiete_NOK_trial',
 	success: function(response){
 		jsnpolys = JSON.parse(response);
 		lyrpoly = L.geoJSON(jsnpolys).addTo(map);	
