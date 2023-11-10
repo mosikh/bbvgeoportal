@@ -143,6 +143,8 @@
 
 
 
+
+
 <div id="sidebar">
 	<div class="tab">
 		<button class="tablinks" onclick="opentabs(event, 'Layers')" id="defaulttab">Layers</button>
@@ -186,8 +188,8 @@
 
 
 
-<script>
 
+<script>
 
 
 var map = L.map('map').setView([49.510208, 9.312286], 10);
@@ -316,26 +318,12 @@ L.control.coordinates({
 
 
 //----------------------------------------------------------------------------------
-var lyrpoly;
- $.ajax({url:'http://localhost:3000/users?db=Sandbox4test_mh&shape=polygon&crm=Ausbaugebiete_NOK_trial',
- //$.ajax({url:'https://bbvnewgeoportal.onrender.com/users?db=Sandbox4test_mh&shape=polygon&crm=Ausbaugebiete_NOK_trial',
-	success: function(response){
-		jsnpolys = JSON.parse(response);
-		lyrpoly = L.geoJSON(jsnpolys).addTo(map);	
-		},
-		error: function (xhr,status, error){
-		alert("ERROR: " + error);
-	}
-});
-
-$(".layerbox").append('<ul id="mainausbau" class=ocbutton>');
-$("#mainausbau").append('<li><span class="caret"><input type="checkbox" class="check" name = "lyrpoly" id="ausbau"  checked>Ausbaugebiete</span>');
-
 
 
 var markers;
-
-$.ajax({url:'http://localhost:3000/users?db=BBVCRMMirror&shape=point&crm=nok',
+   
+//$.ajax({url:'http://localhost:3000/get-layer/BBVCRMMirror/point/crm_nok_gee_mirror',
+$.ajax({url:'https://bbvnewgeoportal.onrender.com/get-layer/BBVCRMMirror/point/crm_nok_gee_mirror',
 	success: function(response){
 		jsnEagles = JSON.parse(response);
 		lyrTest = L.geoJSON(jsnEagles,{
@@ -371,7 +359,12 @@ $.ajax({url:'http://localhost:3000/users?db=BBVCRMMirror&shape=point&crm=nok',
 		disableClusteringAtZoom: 18
 		});
 		markers.addLayer(lyrTest);
+		
+		markers.on('add', function() {
+			console.log('The custom layer has been added to the map!');
+		});		
 		map.addLayer(markers);
+		
 			
 	},
 		error: function (xhr,status, error){
@@ -394,8 +387,9 @@ $('head').append("<style>#mainstandort .caret:before { color:#4169e1; }</style>"
 
 $(".layerbox").append('<ul id="maingemeinden" class=ocbutton>');
 $("#maingemeinden").append('<li><span class="caret"><input type="checkbox" class="check" id="gemeinden"  checked>Clustergemeinden</span>');
-
-$.ajax({url:'http://localhost:3000/users?db=Sandbox4test_mh&shape=polygon&crm=Clustergemeinden NOK V1 05.05.20',
+   
+//$.ajax({url:'http://localhost:3000/get-layer/Sandbox4test_mh/polygon/"Clustergemeinden NOK V1 05.05.20"',
+$.ajax({url:'https://bbvnewgeoportal.onrender.com/get-layer/Sandbox4test_mh/polygon/"Clustergemeinden NOK V1 05.05.20"',
 	success: function(response){
 		jsnpolys = JSON.parse(response);
 		lyrgem = L.geoJSON(jsnpolys).addTo(map);
@@ -417,7 +411,36 @@ $('head').append("<style>#maingemeinden .caret:before { color:#4169e1; }</style>
 
 
 
+var lyrpoly;
+// $.ajax({url:'http://localhost:3000/get-layer/Sandbox4test_mh/polygon/"Ausbaugebiete_NOK_trial"',
+$.ajax({url:'https://bbvnewgeoportal.onrender.com/get-layer/Sandbox4test_mh/polygon/"Ausbaugebiete_NOK_trial"',
+	success: function(response){
+		jsnpolys = JSON.parse(response);
+		lyrpoly = L.geoJSON(jsnpolys, {style:{color: 'red'}}).addTo(map);
+		},
+		error: function (xhr,status, error){
+		alert("ERROR: " + error);
+	}
+});
 
+$(".layerbox").append('<ul id="mainausbau" class=ocbutton>');
+$("#mainausbau").append('<li><span class="caret"><input type="checkbox" class="check" name = "lyrpoly" id="ausbau"  checked>Ausbaugebiete</span>');
+
+
+var lyrline;
+// $.ajax({url:'http://localhost:3000/get-layer/BBVGeoMaster/line/"Bautrassen NOK 230502 Archiv"',
+ $.ajax({url:'https://bbvnewgeoportal.onrender.com/get-layer/BBVGeoMaster/line/"Bautrassen NOK 230502 Archiv"',
+	success: function(response){
+		jsnpolys = JSON.parse(response);
+		lyrline = L.geoJSON(jsnpolys, {style:{color: '#FFEA00'}}).addTo(map);
+		},
+		error: function (xhr,status, error){
+		alert("ERROR: " + error);
+	}
+});
+
+$(".layerbox").append('<ul id="mainline" class=ocbutton>');
+$("#mainline").append('<li><span class="caret"><input type="checkbox" class="check" name = "lyrline" id="line"  checked>Interpolygone</span>');
 //-------------------------------------------------------------------------------------------------------testtest
 
 <!-- function symbology (feature){ -->
@@ -554,6 +577,9 @@ $(".check").change(function() {
       break;
 	case "gemeinden":
       toggleLayer(this.checked, lyrgem);
+      break;
+	case "line":
+      toggleLayer(this.checked, lyrline);
       break;
       // ...and so on...
  }
@@ -694,6 +720,8 @@ $(document).ready(function() {
 $(".easy-button-container button").trigger('click');
 });
 //---------------------------------------------------------------------
+
+
 
 
 </script>
