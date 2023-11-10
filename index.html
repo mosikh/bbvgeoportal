@@ -318,12 +318,12 @@ L.control.coordinates({
 
 
 //----------------------------------------------------------------------------------
-
+//var domain = "http://localhost:3000"
+var domain = "https://bbvnewgeoportal.onrender.com"
 
 var markers;
    
-//$.ajax({url:'http://localhost:3000/get-layer/BBVCRMMirror/point/crm_nok_gee_mirror',
-$.ajax({url:'https://bbvnewgeoportal.onrender.com/get-layer/BBVCRMMirror/point/crm_nok_gee_mirror',
+$.ajax({url:domain+'/get-layer/BBVCRMMirror/point/crm_nok_gee_mirror',
 	success: function(response){
 		jsnEagles = JSON.parse(response);
 		lyrTest = L.geoJSON(jsnEagles,{
@@ -388,8 +388,7 @@ $('head').append("<style>#mainstandort .caret:before { color:#4169e1; }</style>"
 $(".layerbox").append('<ul id="maingemeinden" class=ocbutton>');
 $("#maingemeinden").append('<li><span class="caret"><input type="checkbox" class="check" id="gemeinden"  checked>Clustergemeinden</span>');
    
-//$.ajax({url:'http://localhost:3000/get-layer/Sandbox4test_mh/polygon/"Clustergemeinden NOK V1 05.05.20"',
-$.ajax({url:'https://bbvnewgeoportal.onrender.com/get-layer/Sandbox4test_mh/polygon/"Clustergemeinden NOK V1 05.05.20"',
+$.ajax({url:domain+'/get-layer/Sandbox4test_mh/polygon/"Clustergemeinden NOK V1 05.05.20"',
 	success: function(response){
 		jsnpolys = JSON.parse(response);
 		lyrgem = L.geoJSON(jsnpolys).addTo(map);
@@ -412,8 +411,7 @@ $('head').append("<style>#maingemeinden .caret:before { color:#4169e1; }</style>
 
 
 var lyrpoly;
-// $.ajax({url:'http://localhost:3000/get-layer/Sandbox4test_mh/polygon/"Ausbaugebiete_NOK_trial"',
-$.ajax({url:'https://bbvnewgeoportal.onrender.com/get-layer/Sandbox4test_mh/polygon/"Ausbaugebiete_NOK_trial"',
+$.ajax({url:domain+'/get-layer/Sandbox4test_mh/polygon/"Ausbaugebiete_NOK_trial"',
 	success: function(response){
 		jsnpolys = JSON.parse(response);
 		lyrpoly = L.geoJSON(jsnpolys, {style:{color: 'red'}}).addTo(map);
@@ -428,8 +426,7 @@ $("#mainausbau").append('<li><span class="caret"><input type="checkbox" class="c
 
 
 var lyrline;
-// $.ajax({url:'http://localhost:3000/get-layer/BBVGeoMaster/line/"Bautrassen NOK 230502 Archiv"',
- $.ajax({url:'https://bbvnewgeoportal.onrender.com/get-layer/BBVGeoMaster/line/"Bautrassen NOK 230502 Archiv"',
+ $.ajax({url:domain+'/get-layer/BBVGeoMaster/line/"Bautrassen NOK 230502 Archiv"',
 	success: function(response){
 		jsnpolys = JSON.parse(response);
 		lyrline = L.geoJSON(jsnpolys, {style:{color: '#FFEA00'}}).addTo(map);

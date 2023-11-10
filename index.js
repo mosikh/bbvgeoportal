@@ -88,7 +88,8 @@ app.get('/get-layer/:database/:shape/:table', (req, res) => {
       };
 		
     const geojsonString = JSON.stringify(geojsonData);
-		res.send(geojsonString);
+	geojsonString.stdout.pipe(res);
+		//res.send(geojsonString);
      });
 });
 //----------------------
