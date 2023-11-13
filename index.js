@@ -89,6 +89,11 @@ app.get('/get-layer/:database/:shape/:table', (req, res) => {
       };
 		
     const geojsonString = JSON.stringify(geojsonData);
+	
+	//res.setHeader('Content-Type', 'application/json');
+	
+	const p = JSON.parse(geojsonString);
+	// readableStream.pipe(res);
 	//const parser = JSONStream.parse('*');
 	//parser.on('data', (geojsonData) => {
   // Process each chunk of parsed JSON data
@@ -101,10 +106,11 @@ app.get('/get-layer/:database/:shape/:table', (req, res) => {
 	// var p = geojsonData.pipe(parser);
 	//var spawn = require('child_process').spawn;
 	//const childProcess = spawn('node', [], { stdio: ['pipe', 'pipe', 'pipe'] });
-	//let geojsonStrin = JSON.parse(geojsonString);
-	//geojsonStrin.stdout.pipe(res);
-	//console.log(geojsonString);
-	res.send(geojsonString);
+	//let geojsonStrin = JSON.parse(JSON.stringify(geojsonData));
+	//console.log(geojsonStrin);
+	//geojsonString.stdout.pipe(res);
+	
+	res.send(p);
 	//childProcess.stdout.pipe(res)
 		//res.send(geojsonString);
      });

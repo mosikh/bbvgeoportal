@@ -325,8 +325,8 @@ var markers;
    
 $.ajax({url:domain+'/get-layer/BBVCRMMirror/point/crm_nok_gee_mirror',
 	success: function(response){
-		jsnEagles = JSON.parse(response);
-		lyrTest = L.geoJSON(jsnEagles,{
+		//jsnEagles = JSON.parse(response);
+		lyrTest = L.geoJSON(response,{
 		pointToLayer: function (feature, latlng) {
 		
 		var colorToUse;
