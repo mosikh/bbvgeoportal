@@ -40,6 +40,7 @@ const router = express.Router();
 const { Pool } = require('pg');
 const pgp = require('pg-promise')();
 const fs = require('fs');
+//const JSONStream = require('JSONStream');
 
 
 
@@ -88,7 +89,23 @@ app.get('/get-layer/:database/:shape/:table', (req, res) => {
       };
 		
     const geojsonString = JSON.stringify(geojsonData);
-	geojsonString.stdout.pipe(res);
+	//const parser = JSONStream.parse('*');
+	//parser.on('data', (geojsonData) => {
+  // Process each chunk of parsed JSON data
+	// JSON.stringify(geojsonData);
+  // Example: Log the data
+  //console.log(geojsonString);
+	//});
+	//console.log("ff");
+	//const parser = JSONStream.parse('*');
+	// var p = geojsonData.pipe(parser);
+	//var spawn = require('child_process').spawn;
+	//const childProcess = spawn('node', [], { stdio: ['pipe', 'pipe', 'pipe'] });
+	//let geojsonStrin = JSON.parse(geojsonString);
+	//geojsonStrin.stdout.pipe(res);
+	//console.log(geojsonString);
+	res.send(geojsonString);
+	//childProcess.stdout.pipe(res)
 		//res.send(geojsonString);
      });
 });
