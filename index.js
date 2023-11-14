@@ -111,7 +111,8 @@ app.get('/get-layer/:database/:shape/:table', (req, res) => {
         type: 'Feature',
         geometry: JSON.parse(row.geometry),
        properties: {
-			 ...row
+			 //...row
+			 column1: row.geometry
         },
       }));
 	  
@@ -174,9 +175,9 @@ app.get('/get-layer/:database/:shape/:table', (req, res) => {
 	
 	// res.send(geojsonString);
 	// childProcess.stdout.pipe(res)
-		// res.send(geojsonString);
+		//res.send(geojsonString);
 
-     
+    //console.log(process.memoryUsage().heapUsed / 1024 / 1024);
 	 
 	});
 	 
@@ -188,6 +189,7 @@ router.get('/', function(req, res) {
 });
 
 app.use('/', router); 
+
 
 // app.listen(port, () => {
   // console.log(`Server is listening on port ${port}`);
