@@ -40,7 +40,7 @@
 	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script> 
   
 
-   
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 
   <script src="https://unpkg.com/leaflet-sidebar"></script>
   <link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet-sidebar/src/L.Control.Sidebar.css"/>
@@ -82,6 +82,8 @@
 <!-- <link rel="stylesheet" href="./node_modules/leaflet-measure/dist/leaflet-measure.css" /> -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet-measure/dist/leaflet-measure.css" />
 
+<script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.js"></script>
+<script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.bundled.js"></script>
 
 <!-- <script src="./lib/L.Control.Button.js"></script> -->
 <!-- <script src="https://github.com/jerroydmoore/leaflet-button/blob/master/L.Control.Button.js"></script> -->
@@ -98,7 +100,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css"/>
 
 <!-- <script src="http://requirejs.org/docs/release/2.3.1/minified/require.js"></script> -->
-
+<script src="https://unpkg.com/@turf/turf"></script>
  
 <!-- <script src="http://localhost:3000/users"></script> -->
 <!-- <script src="./geojson/ausbau.geojson"></script> -->
@@ -112,6 +114,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/leaflet-layer-tree@1.0.0/src/L.LayerTreeControl.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-layer-tree@1.0.0/src/L.LayerTreeControl.min.css">
+<script src="https://unpkg.com/leaflet-geometryutil@0.14.0/leaflet.geometryutil.js"></script>
+<script src="https://unpkg.com/leaflet-tilelayer-geojson@1.2.0/dist/tileLayer.geojson.js"></script>
 </head>
 
 <body>
@@ -122,7 +126,7 @@
 			<a class="navbar-brand ms-auto">
 				<!-- <img src="http://localhost:3000/IFN_Header.svg" width="50" height="50"  alt=""> -->
 				<img src="https://bbvnewgeoportal.onrender.com/IFN_Header.svg" width="50" height="50"  alt="">
-				Backoffice Portal Adressdaten NOK
+				BBV Planauskunft
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -192,7 +196,7 @@
 <script>
 
 
-var map = L.map('map').setView([49.510208, 9.312286], 10);
+var map = L.map('map').setView([49.036291, 8.701059], 12);
 
 
 var baselayers  = {
@@ -318,126 +322,73 @@ L.control.coordinates({
 
 
 //----------------------------------------------------------------------------------
-//var domain = "http://localhost:3000"
-var domain = "https://bbvnewgeoportal.onrender.com"
+var domain = "http://localhost:3000"
+//var domain = "https://bbvnewgeoportal.onrender.com"
 
-var markers;
-   
-$.ajax({url:domain+'/get-layer/BBVCRMMirror/point/crm_nok_gee_mirror',
+
+	$.ajax({url:domain+'/get-layer/Sandbox4test_mh/polygon/"Ausbaugebiete_NOK_trial"',
 	success: function(response){
-		//jsnEagles = JSON.parse(response);
-		lyrTest = L.geoJSON(response,{
-		pointToLayer: function (feature, latlng) {
-		
-		var colorToUse;
-		var city = feature.properties["Liegenschaft - Ort"];
-        
-		if (city === "Adelsheim") colorToUse = "#46C7FA";
-		else if (city === "Aglasterhausen") colorToUse = "#E81D1A";
-		else if (city === "Fahrenbach") colorToUse = "#4161BA";
-		else if (city === "Mudau") colorToUse = "#599C65";
-		else if (city === "Rosenberg") colorToUse = "#65018A";
-		else colorToUse = "#000000";
-            
-		var hpstyle = {
-			radius: 5,
-			fillColor: colorToUse,
-			color: "#000",
-			weight: 1,
-			opacity: 1,
-			fillOpacity: 0.8
-		};
-
-        return L.circleMarker(latlng, hpstyle);
+		//addedlayer = L.geoJSON(response, {style:{color: '#FFEA00'}});	
+		geoJsonUrl = domain+'/get-layer/Sandbox4test_mh/polygon/"Ausbaugebiete_NOK_trial"';
+		geoJsonLayer = new L.TileLayer.GeoJSON(geoJsonUrl, {
+		clipTiles: true,
+		unique: function (feature) {
+			return feature.properties.id; // Ensure each polygon has a unique identifier
+		},
+		tileSize: 256, // Adjust the tile size based on your data and performance requirements
+		style: function (feature) {
+			return { color: 'red', weight: 1, fillOpacity: 0.5 };
 		}
 		});
-		markers = L.markerClusterGroup({
-		spiderfyOnMaxZoom: true,
-		showCoverageOnHover: false,
-		zoomToBoundsOnClick: true,
-		removeOutsideVisibleBounds: true,
-		disableClusteringAtZoom: 18
-		});
-		markers.addLayer(lyrTest);
-		
-		markers.on('add', function() {
-			console.log('The custom layer has been added to the map!');
-		});		
-		map.addLayer(markers);
-		
-			
+
+		map.addLayer(geoJsonLayer);
+		map.fitBounds(geoJsonLayer.getBounds());	
 	},
 		error: function (xhr,status, error){
 		alert("ERROR: " + error);
 	}
 	
-});
+	});
+	
 
-$(".layerbox").append('<ul id="mainstandort" class=ocbutton>');
-$("#mainstandort").append('<li><span class="caret"><input type="checkbox" class="check" name="markers" id="standort"  checked>Standorte</span>');
-//var cities = ["Adelsheim","Aglasterhausen","Fahrenbach","Mudau","Rosenberg"];
-//for (var i = 0; i < cities.length; i++) {
-//	$("#mainstandort li").append('<ul class="nested">')
-//	$("#mainstandort ul").append('<li><input type="checkbox" class="subcheck" style="margin-left:25px;" checked>'+cities[i]+'</li>')
-//}
-$('head').append("<style>#mainstandort .caret:before { color:#4169e1; }</style>");
+<!-- $(".layerbox").append('<ul id="mainline" class=ocbutton>'); -->
+<!-- $("#mainline").append('<li><span class="caret"><input type="checkbox" class="check" name = "lyrline" id="line"  checked>Interpolygone</span>'); -->
 
 
+<!-- var plan_layer = ["Bretten"] -->
+<!-- let maplayers = {}; -->
 
+<!-- for (let i = 0; i < plan_layer.length; i++) { -->
+    <!-- //var lyrline; -->
+	<!-- $.ajax({url:domain+'/get-layer/BBVPlanauskunft/line/"'+plan_layer[i]+'"', -->
+		<!-- success: function(response){ -->
+			<!-- layrval = plan_layer[i]; -->
+			<!-- addedlayer = L.geoJSON(response, {style:{color: '#FFEA00'}}).addTo(map); -->
+			<!-- maplayers[layrval] = addedlayer; -->
+			<!-- }, -->
+			<!-- error: function (xhr,status, error){ -->
+			<!-- alert("ERROR: " + error); -->
+		<!-- } -->
+	<!-- }); -->
+	
+	<!-- $(".layerbox").append('<input type="checkbox" class="check" value='+plan_layer[i]+' onchange="toggleLayer(this);" checked>'+plan_layer[i]+'<br>') -->
 
-$(".layerbox").append('<ul id="maingemeinden" class=ocbutton>');
-$("#maingemeinden").append('<li><span class="caret"><input type="checkbox" class="check" id="gemeinden"  checked>Clustergemeinden</span>');
-   
-$.ajax({url:domain+'/get-layer/Sandbox4test_mh/polygon/"Clustergemeinden NOK V1 05.05.20"',
-	success: function(response){
-		//jsnpolys = JSON.parse(response);
-		lyrgem = L.geoJSON(response).addTo(map);
-		map.fitBounds(lyrgem.getBounds());
-		},
-		error: function (xhr,status, error){
-		alert("ERROR: " + error);
-	}
-});
+	<!-- //$(".layerbox").append('<ul id="mainline" class=ocbutton>'); -->
+	<!-- //$("#mainline").append('<li><span class="caret"><input type="checkbox" class="check" checked>Interpolygone</span>'); -->
 
-
-//var cities = ["Adelsheim","Aglasterhausen","Fahrenbach","Mudau","Rosenberg"];
-
-<!-- for (var i = 0; i < cities.length; i++) { -->
-	<!-- $("#maingemeinden li").append('<ul class="nested">') -->
-	<!-- $("#maingemeinden ul").append('<li><input type="checkbox"  class="subcheck" style="margin-left:25px;" checked>'+cities[i]+'</li>') -->
+	<!-- //console.log(scores[i]); -->
 <!-- } -->
-$('head').append("<style>#maingemeinden .caret:before { color:#4169e1; }</style>");
 
+<!-- function toggleLayer(layerName) { -->
+    <!-- const checkbox = layerName.value; -->
+    <!-- const layer = maplayers[layerName.value]; -->
 
-
-var lyrpoly;
-$.ajax({url:domain+'/get-layer/Sandbox4test_mh/polygon/"Ausbaugebiete_NOK_trial"',
-	success: function(response){
-		//jsnpolys = JSON.parse(response);
-		lyrpoly = L.geoJSON(response, {style:{color: 'red'}}).addTo(map);
-		},
-		error: function (xhr,status, error){
-		alert("ERROR: " + error);
-	}
-});
-
-$(".layerbox").append('<ul id="mainausbau" class=ocbutton>');
-$("#mainausbau").append('<li><span class="caret"><input type="checkbox" class="check" name = "lyrpoly" id="ausbau"  checked>Ausbaugebiete</span>');
-
-
-var lyrline;
- $.ajax({url:domain+'/get-layer/BBVGeoMaster/line/"Bautrassen NOK 230502 Archiv"',
-	success: function(response){
-		//jsnpolys = JSON.parse(response);
-		lyrline = L.geoJSON(response, {style:{color: '#FFEA00'}}).addTo(map);
-		},
-		error: function (xhr,status, error){
-		alert("ERROR: " + error);
-	}
-});
-
-$(".layerbox").append('<ul id="mainline" class=ocbutton>');
-$("#mainline").append('<li><span class="caret"><input type="checkbox" class="check" name = "lyrline" id="line"  checked>Interpolygone</span>');
+    <!-- if (checkbox.checked) { -->
+       <!-- map.addLayer(layer); -->
+    <!-- } else { -->
+       <!-- map.removeLayer(layer); -->
+    <!-- } -->
+    <!-- } -->
 //-------------------------------------------------------------------------------------------------------testtest
 
 <!-- function symbology (feature){ -->
@@ -561,33 +512,33 @@ document.getElementById("defaulttab").click();
 //var ids = ["standort", "ausbau", "gemeinden"];
 //var layers = [markers,lyrpoly,lyrgem ];
 
-$(".check").change(function() {
-  var layerClicked = $(this).attr("id");
+// $(".check").change(function() {
+ // var layerClicked = $(this).attr("id");
 
-  switch (layerClicked) {
+ // switch (layerClicked) {
   
-    case "standort":
-      toggleLayer(this.checked, markers);
-      break;
-    case "ausbau":
-      toggleLayer(this.checked, lyrpoly);
-      break;
-	case "gemeinden":
-      toggleLayer(this.checked, lyrgem);
-      break;
-	case "line":
-      toggleLayer(this.checked, lyrline);
-      break;
+ //   case "standort":
+  //    toggleLayer(this.checked, markers);
+  //    break;
+  //  case "ausbau":
+   //   toggleLayer(this.checked, lyrpoly);
+   //   break;
+//	case "gemeinden":
+ //     toggleLayer(this.checked, lyrgem);
+ //     break;
+//	case "line":
+//      toggleLayer(this.checked, lyrline);
+//      break;
       // ...and so on...
- }
-});
-function toggleLayer(checked, layer) {
-  if (checked) {
-    map.addLayer(layer);
-  } else {
-    map.removeLayer(layer);
-  }
-}
+ // }
+// });
+// function toggleLayer(checked, layer) {
+//  if (checked) {
+//    map.addLayer(layer);
+//  } else {
+//    map.removeLayer(layer);
+//  }
+//}
 
 
 <!-- function myfunc(e) {  -->
