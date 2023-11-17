@@ -124,21 +124,21 @@
 <div class="container-fluid">
 	<nav class="navbar navbar-expand-sm bg-success" style="height:5vh;background-color: #000080 !important;">
 		<div class="container-fluid ">
-			<a class="navbar-brand ms-auto">
+			<a class="navbar-brand">
 				<!-- <img src="http://localhost:3000/IFN_Header.svg" width="50" height="50"  alt=""> -->
 				<img src="https://bbvnewgeoportal.onrender.com/IFN_Header.svg" width="50" height="50"  alt="">
 				Backoffice Portal Adressdaten NOK
 			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse " id="navbarSupportedContent">
-				<ul class="navbar-nav ms-auto">
-					<li class="nav-item">
-						<a class="nav-link active" href="planauskunft.html">Planauskunft</a>
-					</li>
-				</ul>
-			</div>
+			<!-- <div class="collapse navbar-collapse " id="navbarSupportedContent"> -->
+				<!-- <ul class="navbar-nav ms-auto"> -->
+					<!-- <li class="nav-item"> -->
+						<!-- <a class="nav-link active" href="/">Backoffice</a> -->
+					<!-- </li> -->
+					<!-- <li class="nav-item"> -->
+						<!-- <a class="nav-link active" href="/planauskunft">Planauskunft</a> -->
+					<!-- </li> -->
+				<!-- </ul> -->
+			<!-- </div> -->
 		</div>		
 	</nav>
 			
@@ -175,19 +175,47 @@
 	</div>
 	
 	<div id="Information" class="tabcontent">
-		<h3>Paris</h3>
-		<p>Paris is the capital of France.</p>
+		<h3>Title</h3>
+		<p>Beschreibung</p>
 	</div>
 
 	<div id="Permalink" class="tabcontent">
-		<h3>Tokyo</h3>
-		<p>Tokyo is the capital of Japan.</p>
+		<h3>Title</h3>
+		<p>Beschreibung</p>
 	</div>
 	
 	<div id="Projects" class="tabcontent">
-		<div id="keke"></div>
-		<h3>Projects</h3>
-		<p>Projects is the capital of Japan.</p>
+		<div class="projectbox">
+			<table>
+				<tr>
+					<td colspan="2"><p>Backoffice Projekte</p></td>
+				</tr>
+				<tr>
+					<td><a href="/"><img src="https://bbvnewgeoportal.onrender.com/nok.jpg" ></a></td>
+					<td><img src="https://bbvnewgeoportal.onrender.com/mtk.jpg"></td>
+				</tr>
+				<tr>
+					<td><a>Backoffice Portal Adressdaten NOK</a></td>
+					<td><a>Backoffice Portal Adressdaten MTK</a></td>
+				</tr>
+				<tr>
+					<td colspan="2"><hr class="line"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p>Planauskunft Projekte</p></td>
+				</tr>
+  
+				<tr>
+					<td><a href="/planauskunft"><img src="https://bbvnewgeoportal.onrender.com/auskunft.jpg"></a></td>
+					<td><img src="https://bbvnewgeoportal.onrender.com/etc.jpg"></td>
+				</tr>
+				<tr>
+					<td><a>Planauskunft 1</a></td>
+					<td><a>Planauskunft 2</a></td>
+				</tr>
+			</table>
+
+		</div>
 	</div>
 </div>
 
@@ -255,17 +283,6 @@ function changebase(){
 }
 
 //--------------------------------------------------------------------------------------------
-options ={
-collapsed: false,
-errorMessage: "Nothing found...",
-showResultIcons: false,
-geocoder: new L.Control.Geocoder.Nominatim(),
-suggestMinLength: 3,
-queryMinLength: 1
-}
-L.Control.geocoder(options).addTo(map);
-
-//------------------------------------------------------------------------------------------
 options ={
 position: 'topleft', 
 title: 'Print ...',
@@ -357,11 +374,11 @@ $.ajax({url:domain+'/get-layer/BBVCRMMirror/point/crm_nok_gee_mirror',
 		}
 		});
 		markers = L.markerClusterGroup({
-		spiderfyOnMaxZoom: true,
-		showCoverageOnHover: false,
-		zoomToBoundsOnClick: true,
-		removeOutsideVisibleBounds: true,
-		disableClusteringAtZoom: 18
+			spiderfyOnMaxZoom: true,
+			showCoverageOnHover: false,
+			zoomToBoundsOnClick: true,
+			removeOutsideVisibleBounds: true,
+			disableClusteringAtZoom: 18
 		});
 		markers.addLayer(lyrTest);
 		
@@ -723,7 +740,18 @@ $(".easy-button-container button").trigger('click');
 });
 //---------------------------------------------------------------------
 
+options ={
+	collapsed: false,
+	errorMessage: "Nothing found...",
+	showResultIcons: false,
+	geocoder: new L.Control.Geocoder.Nominatim(),
+	suggestMinLength: 3,
+	queryMinLength: 1,
+	position:"topright",
+}
+L.Control.geocoder(options).addTo(map);
 
+//------------------------------------------------------------------------------------------
 
 
 </script>

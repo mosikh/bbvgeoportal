@@ -39,9 +39,6 @@ p{
 	will-change: transform;
     }
 
-.row {
-  height: 100%;
-  }
 
 .container-fluid {
    height: 100vh;
@@ -364,4 +361,60 @@ ul, .ocbutton {
 }
 .ocbutton ul li{
  margin-left: -17px;
+}
+
+.mycluster{
+	color: #000000;
+	font-size: 18px;
+}
+.mycluster a{
+	background-color: #00ffff;
+	border-radius: 50%;
+}
+
+.projectbox{
+	position: relative;
+	width: 100%;
+	background-color: #00ffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 5px solid #00ffff;
+	border-bottom: 5px solid #00ffff;
+ }
+
+
+
+.projectbox table {
+      border-collapse: collapse;
+      margin: 2px;
+    }
+
+.projectbox td {
+      padding: 2px;
+      text-align: center;
+    }
+
+.projectbox img {
+      width: 94%; /* Set your desired width */
+      height: auto; /* Maintain aspect ratio */
+    }
+	
+.projectbox p {
+	font-weight: bold;
+	font-size: 17px;
+	color: #000080;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.projectbox a {
+	font-weight: bold;
+	font-size: 13px;
+	color: #000080;
+}
+
+.projectbox hr {
+	width: 95%;
+	background-color: #000080;
+	margin: auto;
 }
