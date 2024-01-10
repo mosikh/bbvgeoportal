@@ -20,6 +20,7 @@ body{
 }
 
 
+
 h4 {
 	color: rgba(87,32,255) ;
 	margin-top: 5px;
@@ -52,7 +53,7 @@ p{
 	width: 100%;
 	color: #000080;
 }
- .layerbox{
+.mainbox{
 	position: relative;
 	width: 100%;
 	background-color: #00ffff;
@@ -61,16 +62,19 @@ p{
 	border-top: 5px solid #00ffff;
 	border-bottom: 5px solid #00ffff;
  }
-  .layerbox input{
+.mainbox input{
 	 margin-left: 10px;
 	 margin-right: 10px;
 	 margin-top: 5px;
 	 margin-bottom: 5px;
   }
- #basetiles{
+#basetiles{
 	width: 100%;
 	background-color: #00ffff;
+	height: 30px;
+	margin-bottom: 20px;
  }
+
 
 .un {
 position: absolute;
@@ -232,41 +236,107 @@ display: inline-block
 
 
 .tab {
-  overflow: hidden;
-  border: 1px solid #000080;
-  background-color: #00ffff;
+	overflow: hidden;
+	background-color: #00ffff;
+	display: flex;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 0px 14px 0px;
-  transition: 0.3s;
-  font-weight: bold;
-  width: 25%; 
+	background-color: inherit;
+	float: center;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 0px 14px 0px;
+	transition: 0.3s;
+	font-weight: bold;
+	flex: 1;
+	text-align: center;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #6495ed;
+	background-color: #6495ed;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #4169e1;
-  color: white;
+	background-color: #4169e1;
+	color: white;
 }
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #000080;
-  border-top: none;
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #000080;
+	border-top: none;
+}
+
+.permacontent {
+	display: none;
+	padding: 0 12px;
+	border-top: none;
+}
+
+.permabox {
+	border: 0.5px solid #4169E1;
+	padding: 12px 12px 12px 12px;
+	margin-bottom: 10px;
+	background-color: #4169E1;
+}
+
+.copyLinks{
+	border: 1px solid #00FFFF;
+	width: 80%;
+	height: 30px;
+}
+
+.permabox i{
+	color: #000080;
+}
+
+.permabox button{
+	border: #000080;
+}
+
+.permabox input{
+	border:2px solid #000080;
+}
+
+.frameDimention {
+	width: 20%;
+	height: 30px;
+}
+
+#frameWidth{
+	margin-left: 35px;
+}
+
+#dropdown-content{
+	margin-left: 12px;
+	background-color: white;
+	height: 30px;
+	width: 33%;
+	border:2px solid #000080;
+}
+
+.abookmark{
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center;
+}
+
+.abookmark p{
+	margin-left: 12px;
+	margin-top: 12px;
+	color: White;
+	display: inline-block;
+	margin-right: auto;
+}
+.abookmark button{
+	display: inline-block;
 }
 
 .leaflet-control-measure-interaction h3{
@@ -372,7 +442,7 @@ ul, .ocbutton {
 	border-radius: 50%;
 }
 
-.projectbox{
+#projectbox{
 	position: relative;
 	width: 100%;
 	background-color: #00ffff;
@@ -380,41 +450,389 @@ ul, .ocbutton {
 	margin-bottom: 10px;
 	border-top: 5px solid #00ffff;
 	border-bottom: 5px solid #00ffff;
- }
-
-
-
-.projectbox table {
-      border-collapse: collapse;
-      margin: 2px;
-    }
-
-.projectbox td {
-      padding: 2px;
-      text-align: center;
-    }
-
-.projectbox img {
-      width: 94%; /* Set your desired width */
-      height: auto; /* Maintain aspect ratio */
-    }
-	
-.projectbox p {
-	font-weight: bold;
-	font-size: 17px;
-	color: #000080;
-	padding-top: 10px;
-	padding-left: 10px;
 }
 
-.projectbox a {
+
+
+#projectbox table {
+    border-collapse: collapse;
+    margin: 2px;
+	border-spacing: 30px;
+}
+
+#projectbox td {
+    padding: 2px;
+    text-align: center;
+	vertical-align: middle; 
+}
+
+
+#projectbox img {
+    width: 70%; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+	border: 3px solid #000080;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+	
+#projectbox p {
+	font-weight: bold;
+	font-size: 19px;
+	color: #000080;
+	padding-left: 10px;
+	padding-top: 10px;
+	margin-bottom: -5px;
+}
+
+#projectbox a {
 	font-weight: bold;
 	font-size: 13px;
 	color: #000080;
 }
 
-.projectbox hr {
-	width: 95%;
-	background-color: #000080;
-	margin: auto;
+#projectInput {
+	border: 2px solid #000080;
+	width: 80%;
+	height: 30px;
+	margin-left:10%
 }
+
+
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8.7px 5px 0 5px; /* Adjust size as needed */
+    border-color: #4169E1 transparent transparent transparent ; /* Adjust color as needed */
+    cursor: pointer;
+	margin-left: 10px;
+	transition: transform 0.1s ease-in-out; /* Add smooth transition */
+}
+
+.triangle.right {
+    border-width: 8.7px 5px 0 5px; /* Adjust size and direction (right) */
+    transform: rotate(-90deg); /* Rotate the triangle 90 degrees for the right direction */
+}
+
+#infobox p {
+	color: #000;
+	font-size: 11px;
+	padding-left: 15px;
+	padding-right: 10px;
+	text-align: justify;
+	margin-bottom: 2px;
+}
+
+#infobox h4 {
+	color: #000;
+	font-size: 14px;
+	padding-left: 30px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+#infobox img {
+    width: 60%; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+	padding-left: 15px;
+	padding-top: 15px;
+}
+
+.inline-container{
+	display: flex; 
+	align-items: center;
+}
+
+.inline-container p {
+    line-height: 1; /* Set line-height to 1 for vertical alignment */
+    cursor: pointer;
+    margin: 0; /* Remove default margin */
+	color: black;
+	font-size: 13px;
+}
+
+.inline-container input {
+    width: 15px; /* Set the desired width */
+    height: 15px; /* Set the desired height */
+}
+
+#custom-panels {
+	position: absolute;
+	top: 60px;
+	left: 510px; /* Adjust the left position based on the sidebar width */
+	width: 200px; /* Adjust the width as needed */
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+.custom-panel {
+	flex: 1;
+	padding: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	background-color: #000080;
+	z-index: 1000;
+}
+
+.close-btn{
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+	color: #000080;
+    font-size: 15px; /* Adjust the font size as needed */
+	background-color: #00ffff;
+}
+
+#layerPanel .mainbox p {
+	color: #000;
+	font-size: 12px;
+	padding-left: 15px;
+	padding-right: 10px;
+	text-align: justify;
+	margin-bottom: 2px;
+}
+
+#layerPanel .mainbox h4 {
+	color: #000;
+	font-size: 14px;
+	padding-left: 30px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#layerPanel .mainbox button {
+	margin-left: 12px;
+	background-color: #00ffff;
+	color: #000080;
+}
+
+#layerPanel .sliderLabels{
+	display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+	color: black;
+	font-weight: bold;
+	margin-left: 12px;
+	margin-right: 10px;
+	margin-top: -5px;
+}
+
+#layerPanel .currentLevel {
+	color: black;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: -12px;
+	margin-bottom: -5px;
+}
+
+#opacitySlider{
+	width:90%
+}
+#basemapSlider{
+	width:100%;
+}
+
+.sliderLabels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+	color: white;
+	font-weight: bold;
+}
+.currentLevel {
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+#DropdownContainer {
+	position: absolute;
+	top: 110px;
+	right: 12px; /* Adjust the left position based on the sidebar width */
+	width: 320px; /* Adjust the width as needed */
+	z-index: 1000;
+	background-color: #000080;
+	padding:10px;
+}
+
+#DropdownContainer p{
+	font-size: 17px;
+	margin-left: 12px;
+	margin-top: 3px;
+	margin-bottom: 7px;
+}
+.locateSelect{
+	width: 300px; 
+}
+
+.leaflet-control-boxzoom {
+	background-color: #00ffff !important;
+    width: 31px !important;
+    height: 31px !important;
+
+}
+
+#coordinatesPanel {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1000;
+	background-color: #000080;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coordTextBox {
+	width:110px;
+	margin:5px;
+	height:25px;
+}
+
+#coordSystem {
+    flex: 1;
+	margin:5px;
+}
+
+#scale-container {
+    margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+#coord-container{
+	display: flex;
+}
+
+.popupHeader{
+	display: flex;
+	background-color: #000080 !important;
+}
+
+.popupHeader button{
+	position: absolute;
+	float: right;
+	width: 25px;
+	height: 25px;
+	top: 16px;
+    right: 0px;
+    cursor: pointer;
+	color: #000080;
+    font-size: 15px;
+	background-color: transparent;
+	border: 1px solid transparent;
+}
+
+.popupHeader p{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+.popupTable{
+	background-color: #000080 !important;
+	color: white;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	max-height: 200px;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.popupTable table {
+	border-collapse: collapse; /* Collapse the borders into a single border */
+	width: 100%;
+	margin-top: -10px;
+	color: white !important;
+}
+
+/* Style for table rows */
+.popupTable table tr {
+	border: 2px solid white !important;
+	color: white !important;
+}
+
+/* Style for table cells */
+.popupTable table td {
+	border: 2px solid white !important; 
+	padding: 8px;
+	color: white !important;
+}
+
+.popupTable table th {
+	border: 2px solid white !important; 
+	padding: 8px; 
+	color: white !important;
+	font-size: 15px;
+}
+
+
+.popupTable table tbody tr:nth-child(even) td{
+	background-color: #1434A4;
+	font-size: 13px;
+}
+.popupTable table tbody tr:nth-child(odd) td{
+	background-color: #4169E1;
+	font-size: 13px;
+}
+.popupTable table tbody tr:nth-child(even) th{
+	background-color: #1434A4;
+	font-size: 13px;
+}
+.popupTable table tbody tr:nth-child(odd) th{
+	background-color: #4169E1;
+	font-size: 13px;
+}
+
+.leaflet-popup-content-wrapper {
+    background: transparent !important;
+}
+
+.leaflet-popup-content {
+    background: transparent !important;
+    color: transparent !important;
+}
+
+.right-popup-container {
+    position: absolute;
+    top: 300px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+	z-index: 1000;
+	display: none;
+}
+
+.right-popup-container button{
+    position: absolute;
+	float: right;
+	width: 25px;
+	height: 25px;
+	top: 10px;
+    right: 10px;
+    cursor: pointer;
+	color: #000080;
+    font-size: 15px;
+	background-color: white;
+	border: 1px solid  #000080;
+}
+
+.right-popup-container p{
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+}
+
+
+
+
+

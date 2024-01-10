@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="utf-8">
-<title>BBV Geoportal</title>
-<!-- <link rel="stylesheet" type="text/css" href="./public/set.css"> -->
-<link rel="stylesheet" type="text/css" href="./set.css">
-<!-- <link rel="icon" href="./img/un.svg.png"> -->
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="../set.css">
+<link rel="icon" href="../IFN_Header.png">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script
@@ -15,7 +15,7 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous">
       </script>
-	      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -23,111 +23,97 @@
       <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
 	  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script></head>
-      <!-- <link rel="stylesheet" type="text/css" href="dashboard.css"> -->
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
 
- <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" -->
-   <!-- integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" -->
-   <!-- crossorigin=""/> -->
-<!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" -->
-   <!-- integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" -->
-   <!-- crossorigin=""></script> -->
    
    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script> 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" /> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
     
-	<!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" /> -->
-    
-   
+
   
-   <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script> 
   
 
-   
-
-  <script src="https://unpkg.com/leaflet-sidebar"></script>
-  <link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet-sidebar/src/L.Control.Sidebar.css"/>
-  
-  <!-- <script type="text/javascript" src="./lib/L.Control.Sidebar.js"></script> -->
-  <!-- <link type="text/css" rel="stylesheet" href="./lib/L.Control.Sidebar.css" /> -->
-  
   
 
-<!-- <script src="./node_modules/leaflet.browser.print/dist/leaflet.browser.print.min.js"></script> -->
+	<script src="https://unpkg.com/leaflet-sidebar"></script>
+	<link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet-sidebar/src/L.Control.Sidebar.css"/>
+  
+
 <script src="https://unpkg.com/leaflet.browser.print/dist/leaflet.browser.print.min.js"></script>
 
-<!-- <script src="./Leaflet.Coordinates-master/dist/Leaflet.Coordinates-0.1.5.min.js"></script> -->
+
 <script src="https://unpkg.com/leaflet.coordinates/dist/Leaflet.Coordinates-0.1.5.min.js"></script>
 
-<!-- <script src="./node_modules/utm-latlng/UTMLatLng"></script> -->
-<!-- <script src="./node_modules/proj4leaflet/lib/proj4.js"></script>  -->
-<!-- <script src="./node_modules/proj4leaflet/src/proj4leaflet.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.5/proj4.js"></script>
+ <script src="https://unpkg.com/proj4leaflet/src/proj4leaflet.js"></script> 
+  
+  
 
-
-<!-- <script src="https://unpkg.com/utm-latlng/UTMLatLng"></script> -->
-<!-- <script src="https://unpkg.com/proj4leaflet/lib/proj4.js"></script>  -->
-<!-- <script src="https://unpkg.com/proj4leaflet/src/proj4leaflet.js"></script> -->
-
-
-
-<!-- <script src="./node_modules/leaflet.markercluster/dist/leaflet.markercluster.js"></script> -->
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
-<!-- <link rel="stylesheet" href="./node_modules/leaflet.markercluster/dist/MarkerCluster.css" /> -->
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
 
 
-<!-- <script src="./node_modules/leaflet-measure/dist/leaflet-measure.de.js"></script> -->
+
 <script src="https://unpkg.com/leaflet-measure/dist/leaflet-measure.de.js"></script>
 
-<!-- <link rel="stylesheet" href="./node_modules/leaflet-measure/dist/leaflet-measure.css" /> -->
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet-measure/dist/leaflet-measure.css" />
 
 
-<!-- <script src="./lib/L.Control.Button.js"></script> -->
-<!-- <script src="https://github.com/jerroydmoore/leaflet-button/blob/master/L.Control.Button.js"></script> -->
-<!-- <script src="https://unpkg.com/L.Control.Button.js"></script> -->
+
+<script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.js"></script>
+<script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.bundled.js"></script>
+
+
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
 <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
 
 
-<!-- <script src="./node_modules/leaflet-draw/dist/leaflet.draw.js"></script> -->
-<!-- <link rel="stylesheet" href="./node_modules/leaflet-draw/dist/leaflet.draw.css"/> -->
+
 
 <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css"/>
 
-<!-- <script src="http://requirejs.org/docs/release/2.3.1/minified/require.js"></script> -->
+
+<script src="https://unpkg.com/@turf/turf"></script>
+ 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
  
-<!-- <script src="http://localhost:3000/users"></script> -->
-<!-- <script src="./geojson/ausbau.geojson"></script> -->
-<!-- <script src="./geojson/standort.geojson"></script> -->
+<script src="https://unpkg.com/leaflet-tilelayer-wmts/dist/leaflet-tilelayer-wmts.js"></script>
 
-<!-- <script src="./queries.js"></script> -->
-
-<script src="https://cdn.jsdelivr.net/npm/leaflet.control.layers.tree@1.1.0/L.Control.Layers.Tree.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.control.layers.tree@1.1.0/L.Control.Layers.Tree.min.css">
+<!-- <script src="https://unpkg.com/leaflet-tilelayer-wmts@1.0.0/dist/leaflet-tilelayer-wmts.js"></script> -->
+<!-- <script src="https://rawgithub.com/mylen/leaflet.TileLayer.WMTS/master/leaflet-tilelayer-wmts.js"></script> -->
 
 
-<script src="https://cdn.jsdelivr.net/npm/leaflet-layer-tree@1.0.0/src/L.LayerTreeControl.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-layer-tree@1.0.0/src/L.LayerTreeControl.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"/>
+<!-- Include Select2 JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-boxzoom/dist/leaflet-control-boxzoom.css" />
+<script src="https://unpkg.com/leaflet-control-boxzoom/dist/leaflet-control-boxzoom.js"></script>
+
+<script src="https://unpkg.com/@turf/turf"></script>
+
 </head>
 
 <body>
-
 <div class="container-fluid">
-	<nav class="navbar navbar-expand-sm bg-success" style="height:5vh;background-color: #000080 !important;">
+	<nav id="header" class="navbar navbar-expand-sm bg-success" style="height:5vh;background-color: #000080 !important;">
 		<div class="container-fluid ">
 			<a class="navbar-brand">
-				<!-- <img src="http://localhost:3000/IFN_Header.svg" width="50" height="50"  alt=""> -->
-				<img src="https://bbvnewgeoportal.onrender.com/IFN_Header.svg" width="50" height="50"  alt="">
-				Backoffice Portal Adressdaten NOK
+				<img src="../IFN_Header.svg" width="80" height="80"  alt="">
+				<span id="maptitle"></span>
 			</a>
 			<!-- <div class="collapse navbar-collapse " id="navbarSupportedContent"> -->
 				<!-- <ul class="navbar-nav ms-auto"> -->
@@ -142,11 +128,8 @@
 		</div>		
 	</nav>
 			
-	<div id="map" class="row" style="height:95vh;">
-	</div>
+	<div id="map" class="row" style="height:95vh;"></div>
 </div>
-
-
 
 
 
@@ -159,63 +142,120 @@
 	</div>
 	
 	<div id="Layers" class="tabcontent">
-		<div class="layerbox">
-			<!-- <input type="checkbox" class="check" id="standort" checked>Standorte<br> -->
-			<!-- <input type="checkbox" class="check" id="ausbau" checked>Ausbaugebiete<br> -->
-			<!-- <input type="checkbox" class="check" id="gemeinden" checked>Clustergemeinden<br> -->
-
+		<div class="mainbox" id="layertree">
 		</div>
-	<hr class="line">
-	<p>Base Layer</p>
-		<select id="basetiles" onchange="changebase()">
-			<option value="osm" selected > Open Street Map</option>
-			<option value="google"> Google Satellit</option>
-			<option value="carto"> TopPlusOpen - Web Grau</option>
-		</select>
+		<hr class="line">
+		<p style="margin-bottom: 10px;">Base Layers</p>
+		<select id="basetiles" onchange="changebase()"></select>
+		<p style="margin-bottom:-5px;">Opacity</p>
+		<div class="currentLevel"><span id="levelValue">100</span></div>
+		<input type="range" id="basemapSlider" min="0" max="1" step="0.01" value="1"/>
+		<div class="sliderLabels">
+            <span>0</span>
+            <span>100</span>
+        </div>
+		
 	</div>
 	
 	<div id="Information" class="tabcontent">
-		<h3>Title</h3>
-		<p>Beschreibung</p>
+		<div class="mainbox" id="infobox"></div>
 	</div>
 
 	<div id="Permalink" class="tabcontent">
-		<h3>Title</h3>
-		<p>Beschreibung</p>
+		<div class="mainbox" id="linkbox">
+			<div class="tab" style="padding-left:12px;padding-right:12px;padding-top:12px">
+				<button class="permalinks" onclick="openPermatabs(event, 'Bookmarks')" id="defaultlink">Bookmarks</button>
+				<button class="permalinks" onclick="openPermatabs(event, 'Share')">Share</button>
+				<button class="permalinks" onclick="openPermatabs(event, 'Embed')">Embed</button>
+			</div>
+			<div id="Bookmarks" class="permacontent">
+				<div class="permabox">
+					<div>
+						<input type="text" id="addBookmark" class="copyLinks" maxlength="20">
+						<button onclick="addbookmark()" title="Add a bookmark"><i class="fas fa-plus"></i></button>
+					</div>
+				</div>
+			</div>
+			<div id="Share" class="permacontent">
+				<div class="permabox">
+					<input type="text" id="linkTextBox" class="copyLinks" readonly>
+					<button onclick="copyLink(this)" value="linkTextBox"  title="Copy ..."><i class="fas fa-copy"></i></button>
+				</div>
+			</div>
+			<div id="Embed" class="permacontent">
+				<div class="permabox">
+					<div>
+						<select id="dropdown-content" onchange="handleDropdown()">
+							<option value="small" selected>Small</option>
+							<option value="medium">Medium</option>
+							<option value="large">Large</option>
+							<option value="customized">Customized</option>
+						</select>
+						<input type="text" id="frameWidth" class="frameDimention" value="900" onchange="handleTextboxChange(this)">
+						<input type="text" id="frameHeight" class="frameDimention" value="700" onchange="handleTextboxChange(this)">
+					</div>
+					<div>
+						<input type="text" id="frameTextBox" class="copyLinks" readonly>
+						<button onclick="copyLink(this)" value="frameTextBox" title="Copy ..."><i class="fas fa-copy"></i></button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
 	</div>
 	
+	
+	
 	<div id="Projects" class="tabcontent">
-		<div class="projectbox">
-			<table>
-				<tr>
-					<td colspan="2"><p>Backoffice Projekte</p></td>
-				</tr>
-				<tr>
-					<td><a href="/"><img src="https://bbvnewgeoportal.onrender.com/nok.jpg" ></a></td>
-					<td><img src="https://bbvnewgeoportal.onrender.com/mtk.jpg"></td>
-				</tr>
-				<tr>
-					<td><a>Backoffice Portal Adressdaten NOK</a></td>
-					<td><a>Backoffice Portal Adressdaten MTK</a></td>
-				</tr>
-				<tr>
-					<td colspan="2"><hr class="line"></td>
-				</tr>
-				<tr>
-					<td colspan="2"><p>Planauskunft Projekte</p></td>
-				</tr>
-  
-				<tr>
-					<td><a href="/planauskunft"><img src="https://bbvnewgeoportal.onrender.com/auskunft.jpg"></a></td>
-					<td><img src="https://bbvnewgeoportal.onrender.com/etc.jpg"></td>
-				</tr>
-				<tr>
-					<td><a>Planauskunft 1</a></td>
-					<td><a>Planauskunft 2</a></td>
-				</tr>
+		<div class="mainbox" id="projectbox">
+			<input type="text" onkeyup="searchProject()" id="projectInput" placeholder="Search a project...">
+			<table id="projectTable">
 			</table>
-
 		</div>
+	</div>
+</div>
+
+
+
+<div id="custom-panels">
+	<div id="layerPanel" class="custom-panel">
+		<div class="abookmark"><p style="margin-top:3px;">Layer Information</p><button onclick="closePanel()" title="Close" class="close-btn"><i class="fas fa-times"></i></button></div>
+		<div class="mainbox" style="margin-top:-5px;">
+			<h4>Name</h4>
+			<p id="panelName"></p>
+			<h4>Type</h4>
+			<p id="panelType"></p>
+			<h4>Zoom to layer extent</h4>
+			<button onclick="zoomPanel()" title="Zoom ..."><i class="fas fa-search-plus"></i></button>
+			<div id="opacityToHide">
+				<h4 id="opacity-panel">Opacity</h4>
+				<div class="currentLevel"><span id="levelValuePanel">100</span></div>
+				<input type="range" id="opacitySlider" min="0" max="1" step="0.01" value="1" />
+				<div class="sliderLabels">
+					<span>0</span>
+					<span>100</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="DropdownContainer">
+	<div class="abookmark"><p>Locating</p><button onclick="closeLocater()" title="Close" class="close-btn"><i class="fas fa-times"></i></button></div>
+	<div id="locateDropdown">
+	</div>
+</div>
+
+<div id="coordinatesPanel">
+	<div id="scale-container"></div>
+	<div id="coord-container">
+		<input type="text" id="coordLon" class="coordTextBox" readonly>
+		<input type="text" id="coordLat" class="coordTextBox" readonly>
+		<select id="coordSystem" >
+			<option value="degrees" selected>Degrees</option>
+			<option value="meters">Meters</option>
+			<option value="dms">D.M.S.</option>
+		</select>
 	</div>
 </div>
 
@@ -224,405 +264,771 @@
 
 <script>
 
+const pathSegments = window.location.pathname.split('/');
+const mainProject = pathSegments[pathSegments.length - 2];
+const QGISProject = pathSegments.pop();
 
-var map = L.map('map').setView([49.510208, 9.312286], 10);
+//-----------------------------------------------------------------------------------
 
 
-var baselayers  = {
-	"osm" : L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    subdomains: ['a','b','c']}) ,
+// Map creation and qgs loading
+//var domain = "http://localhost:3000"
+var domain = "https://bbvnewgeoportal.onrender.com"
+
+
+var qgs;
+$.ajax({
+	type: "GET",
+    url: domain+'/'+mainProject+'/'+QGISProject+'/getQgsData',
+    dataType: "json",
+	async: false,
+	success: function(data){
+        qgs = data;                
+    },
+	error: function() {
+        console.log('Error in AJAX request');
+    }
+});
+
+
+var conf;
+$.ajax({
+	type: "GET",
+    url: domain+'/'+mainProject+'/'+QGISProject+'/getQgsConf',
+    dataType: "json",
+	async: false,
+	success: function(data){
+        conf = data;                
+    },
+	error: function() {
+        console.log('Error in AJAX request');
+    }
+});
+
+
+var projection = conf.options.projection.proj4;
+var wgsProjection = '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs';
+var wgsCoordinates_first = proj4(projection, wgsProjection, conf.options.initialExtent.slice(0, 2));
+var wgsCoordinates_second = proj4(projection, wgsProjection, conf.options.initialExtent.slice(2, 4));
+var initial_bbox = [(wgsCoordinates_first.slice(1,2).concat(wgsCoordinates_first.slice(0,1))), (wgsCoordinates_second.slice(1,2).concat(wgsCoordinates_second.slice(0,1)))]
+
+var map = L.map('map',{maxZoom: 18,minZoom: 7}).setView([49.510208, 9.312286], 10);
+map.fitBounds(initial_bbox);
+///----------------------------------------------------------------------------------------------------- 
+
+// Zoom to initial map extent 
+var initialBtn = L.easyButton({
+    states: [{
+		icon: "fa-solid fa-maximize",
+        title: 'Zoom to initial map extent',      
+		position: 'topright',
+		id: 'iniButton',
+        onClick: function() {       
+            map.fitBounds(initial_bbox);
+        }       
+    }]
+});
+
+if (!("hideNavbar" in conf.options) || (conf.options.hideNavbar == "False")){
+	initialBtn.addTo(map);
+}
+///-----------------------------------------------------------------------------------------------------
+// Rectangle Zoom
+if (!("hideNavbar" in conf.options) || (conf.options.hideNavbar == "False")){
+	L.Control.boxzoom({ position:'topleft' }).addTo(map);
+}
+
+///-----------------------------------------------------------------------------------------------------
+// Hide +- Default Zoom
+if (("hideNavbar" in conf.options) || (conf.options.hideNavbar == "True")){
+	var zoomControl = document.querySelector('.leaflet-control-zoom');
+	if (zoomControl) {
+		zoomControl.parentNode.removeChild(zoomControl);
+	}
+}
+
+///----------------------------------------------------------------------------------------------------- 
+// Set the title of the map
+var servertitle = qgs.elements[1].elements[16].elements[42].elements[0]["text"]
+var element = document.getElementById("maptitle");
+element.innerText = servertitle;
+
+//------------------------------------------------------------------------------------------------------
+// Title of the HTML project
+var mainProject_decoded = mainProject.replace(new RegExp("%20", 'g'), " ");
+document.title = servertitle+" - "+mainProject_decoded+" - BBV Deutschland";
+//-----------------------------------------------------------------------------------
+// Basemap opacity slider
+var baseSlider = document.getElementById('basemapSlider');
+var levelValue = document.getElementById('levelValue');
+
+baseSlider.addEventListener('input', function() {
+    levelValue.textContent = Math.round((baseSlider.value)*100);
+});
+
+var absololute_dir;
+$.ajax({
+	type: "GET",
+    url: domain+'/directoryPath',
+    dataType: "json",
+	async: false,
+	success: function(data){
+        absololute_dir = data;                
+    },
+	error: function() {
+        console.log('Error in AJAX request');
+    }
+});
+
+// Base layers
+var absololute_dir = absololute_dir['dir'];
+var qgisUrl = domain+'/cgi-bin/qgis_mapserv.fcgi.exe?MAP='+absololute_dir+'/'+mainProject+'/'+QGISProject+'.qgs';
+//var qgisUrl = 'http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?MAP=C:/Users/mkheyrollahi/Downloads/221103-BBVPlanauskunftServer-v3.qgs';
+var base_layers = {};
+
+Object.entries(conf.layers).forEach(([k,v]) => {
+	if ((v.baseLayer == "True") && (v.type == "layer")){
+		baseRaster = L.tileLayer.wms(qgisUrl, {
+			layers: v.id,
+			format: 'image/png',
+			transparent: true,
+		});
+		base_layers[v.title] = baseRaster;
+		$("#basetiles").append('<option value="'+v.title+'">'+v.title+'</option>');
+		if (conf.options.startupBaselayer == k){
+			currentbase = baseRaster;
+			baseRaster.addTo(map);
+			$("#basetiles").val(v.title);
+		}
+	}
+});
+
+if (conf.options.emptyBaselayer == "True"){
+	$("#basetiles").append('<option value="empty">No Base map</option>');
+	base_layers['empty'] = '';
+}
+
+
+if (conf.options.startupBaselayer == "empty"){
+	currentbase = base_layers['empty'];
+	$("#basetiles").val("empty");
+}
+
+let baseOpaCollection = {};
+function changebase(){
+	let baseclick = document.getElementById("basetiles").value
+	if (currentbase != ''){
+		map.removeLayer(currentbase);
+	}
+	if (baseclick != "empty"){
+        map.addLayer(base_layers[baseclick]);
+	}
+	currentbase = base_layers[baseclick];
 	
-	"google": L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
-    maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3'] }),
-	
-	"carto" : L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-	subdomains: 'abcd',
-	maxZoom: 19})
-};
+	// Basemap opacity slider
+	if (currentbase != ''){
+		if (typeof baseOpaCollection[currentbase['options']['layers']] !== 'undefined') {
+			baseSlider.value = baseOpaCollection[currentbase['options']['layers']];
+			levelValue.textContent = Math.round((baseSlider.value)*100);
+		}else{
+			baseSlider.value = 1;
+			levelValue.textContent = 100;
+		}
+	}else{
+		baseSlider.value = 0;
+		levelValue.textContent = 0;
+	}
+}
 
-var currentbase = baselayers["osm"]
-currentbase.addTo(map);
+// Basemap opacity slider
+baseSlider.addEventListener('input', function() {
+	if (currentbase != ''){
+		var opacityBase = baseSlider.value;
+		currentbase.setOpacity(opacityBase);
+		baseOpaCollection[currentbase['options']['layers']] = opacityBase;
+	}
+});
 
+<!-- var baselayers = { -->
+	<!-- "osm" : L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { -->
+    <!-- attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', -->
+    <!-- subdomains: ['a','b','c']}) , -->
+<!-- }; -->
 
+<!-- baselayers["osm"].addTo(map); -->
 
+//---------------------------------------------------------------------------------------------
+// Hide navbar
+$(document).ready(function() {
+	if (("hideHeader" in conf.options) && (conf.options.hideHeader == "True")){
+		$('#header').hide();
+		$('#map').css('height', '100vh');
+	}
+});
+//---------------------------------------------------------------------------------------------
+
+// Sidebar
 var sidebar = L.control.sidebar('sidebar', {
             closeButton: false,
             position: 'left'
         });
-map.addControl(sidebar);
-
-setTimeout(function () {
+		
+if (!("hideLegend" in conf.options) || (conf.options.hideLegend == "False")){
+	map.addControl(sidebar);
+	setTimeout(function () {
             sidebar.show();
-        }, 500);
-		
-		
-
-
-
-// $(".legend-container").append( $("#legend") );
-// $(".legend-toggle").append( "<i class='legend-toggle-icon fa fa-info fa-2x' style='color: #000'></i>" );
-
-
-
- //$(document).ready(function() {
-  //          $('#transparent').change(function() {
-  //              $('.op').attr('style', 'opacity:' + $('#transparent').attr('value')/100);
- //           });
-//    });
-
-
-
-function changebase(){
-	let baseclick = document.getElementById("basetiles").value
-	    map.removeLayer(currentbase);
-        map.addLayer(baselayers[baseclick]) 
-	    currentbase = baselayers[baseclick]
+    }, 500);
 }
-
 //--------------------------------------------------------------------------------------------
-options ={
-position: 'topleft', 
-title: 'Print ...',
-printModes: [
-        L.BrowserPrint.Mode.Landscape("A4",{title: "Landscape"}),
-		L.BrowserPrint.Mode.Portrait("A4",{title: "Portrait"}),
-		L.BrowserPrint.Mode.Auto("A4",{title: "Auto"}),
-		L.BrowserPrint.Mode.Custom("A4",{title: "Custom", margin:0 ,header: {enabled:true, text:"hhhhhhhhhhhhhhhhhhhhhhhhhhhhh",size:"10mm",overTheMap:true}})
-	],
-}
-L.control.browserPrint(options).addTo(map);
 
-//$('#keke').append(L.control.browserPrint(options).onAdd(map))
+// browserPrint
+options ={
+	position: 'topleft', 
+	title: 'Print ...',
+		printModes: [         
+			L.BrowserPrint.Mode.Landscape("A4",{title: "Querformat"}), 
+			L.BrowserPrint.Mode.Portrait("A4",{title: "Hochformat"}), 		
+			L.BrowserPrint.Mode.Auto("A4",{title: "Auto"}), 		
+			L.BrowserPrint.Mode.Custom("A4",{title: "Benutzerdefiniert", margin:0 ,header: {enabled:true, text:"hhhhhhhhhhhhhhhhhhhhhhhhhhhhh",size:"10mm",overTheMap:true}}),
+			//L.browserPrint.mode("Alert Mode",{pageSize: 'A3',orientation: 'Portrait'})
+		], 
+	}
+if (("print" in conf.options) && (conf.options.print == "True")){
+	L.control.browserPrint(options).addTo(map);
+}
 //---------------------------------------------------------------------------------------
 
-map.on('click', function(e){
-  var coord = e.latlng;
-  var lat = coord.lat;
-  var lng = coord.lng;
-  console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
-  });
+//based on WMS
 
-L.control.coordinates({
-	position:"bottomleft", //optional default "bootomright"
-	decimals:6, //optional default 4
-	decimalSeperator:",", //optional default "."
-	labelTemplateLat:"Latitude: {y}", //optional default "Lat: {y}"
-	labelTemplateLng:"Longitude: {x}", //optional default "Lng: {x}"
-	enableUserInput:false, //optional default true
-	useDMS:false, //optional default false
-	useLatLngOrder: true, //ordering of labels, default false-> lng-lat
-	//markerType: L.marker, //optional default L.marker
-	markerProps: {title: "MyLocation",}, //optional default {},
-	labelFormatterLng : function(lng){return lng+" lng"}, //optional default none,
-	labelFormatterLat : function(lat){return lat+" lat"}, //optional default none
-	customLabelFcn:{} //function(latLonObj, opts) { "Geohash: " + encodeGeoHash(latLonObj.lat, latLonObj.lng)} //optional default none
-}).addTo(map);
+async function fetchData(url) {
+	return new Promise((resolve, reject) => {
+		$.ajax({
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				resolve(data);
+			},
+			error: function (xhr, status, error) {
+			reject(new Error(`AJAX error! Status: ${status}, Error: ${error}`));
+			}
+		});
+	});
+}
 
-// var theMarker = {};
+var popupContainer = L.DomUtil.create('div', 'right-popup-container');
+document.body.appendChild(popupContainer);
 
-//  map.on('click',function(e){
- //   lat = e.latlng.lat;
-  //  lon = e.latlng.lng;
- 
-
-    //    if (theMarker != undefined) {
-   //           map.removeLayer(theMarker);
-    //    };
+// Define the click event handler function
+function createSidePopup(content) {
+    return function () {
+        // Display the popup at the constant position
+        popupContainer.style.display = 'none';
+		popupContainer.innerHTML = content;
+		popupContainer.style.display = 'block';
+    };
+}
 
 
-    //Add a marker to show where you clicked.
-  //   theMarker = L.marker([lat,lon]).addTo(map);  
-//	 theMarker.bindPopup("Latitude: "+ lat+" \n Longitude: "+lon);
-//}); 
-
-
-//----------------------------------------------------------------------------------
-//var domain = "http://localhost:3000"
-var domain = "https://bbvnewgeoportal.onrender.com"
-
-var markers;
-   
-$.ajax({url:domain+'/get-layer/BBVCRMMirror/point/crm_nok_gee_mirror',
-	success: function(response){
-		//jsnEagles = JSON.parse(response);
-		lyrTest = L.geoJSON(response,{
-		pointToLayer: function (feature, latlng) {
-		
-		var colorToUse;
-		var city = feature.properties["Liegenschaft - Ort"];
-        
-		if (city === "Adelsheim") colorToUse = "#46C7FA";
-		else if (city === "Aglasterhausen") colorToUse = "#E81D1A";
-		else if (city === "Fahrenbach") colorToUse = "#4161BA";
-		else if (city === "Mudau") colorToUse = "#599C65";
-		else if (city === "Rosenberg") colorToUse = "#65018A";
-		else colorToUse = "#000000";
-            
-		var hpstyle = {
-			radius: 5,
-			fillColor: colorToUse,
-			color: "#000",
-			weight: 1,
-			opacity: 1,
-			fillOpacity: 0.8
-		};
-
-        return L.circleMarker(latlng, hpstyle);
+async function visualization(title, geometryType, toggle, id, response, grouped, popup) {
+	maplayers[title] = []
+	
+	if (grouped == "ungrouped"){
+		var minzoom = 8;
+	}else {
+		var minzoom = 15;
+		var currentZoom = map.getZoom();
+		if (currentZoom < minzoom){
+			opacity =1
+		}else{
+			opacity =0
 		}
+		map.on('zoomend', function () {
+			currentZoom = map.getZoom();
+			if (currentZoom < 15) {
+				opacity =1;
+			} else {
+				opacity =0;
+			}
+			return opacity;
 		});
-		markers = L.markerClusterGroup({
-			spiderfyOnMaxZoom: true,
-			showCoverageOnHover: false,
-			zoomToBoundsOnClick: true,
-			removeOutsideVisibleBounds: true,
-			disableClusteringAtZoom: 18
+			
+		
+		if (geometryType == "line"){
+			var polylineLayer = L.geoJSON(response);
+			var polylineCluster = L.markerClusterGroup({
+				spiderfyOnMaxZoom: true,
+				showCoverageOnHover: false,
+				zoomToBoundsOnClick: true,
+				removeOutsideVisibleBounds: true,
+				iconCreateFunction: function () {
+					return L.divIcon({html: '<br>' + '<div style="text-align:center;opacity:'+opacity+'"><a>' + title + '</a></div>', className: 'mycluster', iconSize: L.point(30, 30) });
+				},
+
+			});
+			polylineLayer.eachLayer(layer => {
+				var latlngs = layer.getLatLngs(); // Get polyline coordinates
+				var polyline = L.polyline(latlngs, { color: 'red' }); // Create a new polyline
+				var center = polyline.getBounds().getCenter(); // Get the center of the polyline
+				var marker = L.marker(center, { icon: L.divIcon({ className: 'leaflet-div-icon' }), opacity:0 });
+				polylineCluster.addLayer(marker); // Add the marker to the cluster group
+			});
+			
+			if (toggle == "checked"){
+				polylineCluster.addTo(map);
+			}	
+			maplayers[title].push(polylineCluster);
+		}else if (geometryType == "polygon"){
+			var polygonLayer = L.geoJSON(response);
+			var polygonCluster = L.markerClusterGroup({
+				spiderfyOnMaxZoom: true,
+				showCoverageOnHover: false,
+				zoomToBoundsOnClick: true,
+				removeOutsideVisibleBounds: true,
+				iconCreateFunction: function () {
+					return L.divIcon({html: '<br>' + '<div style="text-align:center;opacity:'+opacity+'"><a>' + title + '</a></div>', className: 'mycluster', iconSize: L.point(30, 30) });
+				},
+
+			});
+			
+			polygonLayer.eachLayer(layer => {
+				var centroid = turf.centroid(layer.toGeoJSON().geometry);
+				var marker = L.marker([centroid.geometry.coordinates[1], centroid.geometry.coordinates[0]], { icon: L.divIcon({ className: 'leaflet-div-icon' }), opacity:0 })
+				polygonCluster.addLayer(marker);
+			});
+			
+			if (toggle == "checked"){
+				map.addLayer(polygonCluster);
+			}
+			
+			maplayers[title].push(polygonCluster);
+			
+			var minzoom = minzoom -1;
+			
+		}else if (geometryType == "point"){
+			var pointlayer = L.geoJSON(response,{
+				pointToLayer: function (feature, latlng) {
+				hpstyle = {
+					radius: 0.5,
+					weight: 0.01,
+					opacity: 0,
+					fillOpacity: 0
+				};
+
+				return L.circleMarker(latlng, hpstyle);
+				}
+			});
+			var markers = L.markerClusterGroup({
+				spiderfyOnMaxZoom: true,
+				showCoverageOnHover: false,
+				zoomToBoundsOnClick: true,
+				removeOutsideVisibleBounds: true,
+				disableClusteringAtZoom: 15
+			});
+			markers.addLayer(pointlayer);
+			if (toggle == "checked"){
+				map.addLayer(markers);
+			}
+			
+			maplayers[title].push(markers);
+		}
+	}
+	
+	if (popup !== ""){
+		var popopPanel = L.geoJSON(WFSs[title], {
+		// Define popup content based on feature properties
+			style: {
+				opacity: 0,
+				fillOpacity: 0
+			},
+			onEachFeature: function (feature, layer) {
+				
+				if (popup == 'auto'){
+					var tableContent = '<table>';
+					tableContent += '<thead>';
+					tableContent += '<tr><th>Field</th><th>Value</th></tr>';
+					tableContent += '</thead>';
+					tableContent += '<tbody>';
+					for (var prop in feature.properties) {
+						if (feature.properties.hasOwnProperty(prop)) {
+							tableContent += '<tr><th>' + prop + '</th><td>' + feature.properties[prop] + '</td></tr>';
+						}
+					}
+					tableContent += '</tbody>';
+					tableContent += '</table>';
+				} else {
+					var popupCopy = popup;
+					for (var prop in feature.properties) {
+						if (feature.properties.hasOwnProperty(prop)) {
+							var placeholder = '[% "' + prop + '" %]';
+							var value = feature.properties[prop];
+							popupCopy = popupCopy.replace(placeholder, value);
+						}
+					}
+					var tableContent = popupCopy;
+				}
+				
+				var popupContent = '<div class="popupHeader">' +
+                       '<p>'+title+'</p><button title="Close" onclick="closePopup()"><i class="fas fa-times"></i></button></div><div class="popupTable">' +tableContent +'</div>';
+					   
+				if (conf.options.popupLocation == "minidock"){
+					layer.on('click', createSidePopup(popupContent));
+				}else if (conf.options.popupLocation == "map"){
+					layer.bindPopup(popupContent, {
+						maxWidth: 'auto',
+						closeButton: false,
+					})
+				}
+			}
 		});
-		markers.addLayer(lyrTest);
-		
-		markers.on('add', function() {
-			console.log('The custom layer has been added to the map!');
-		});		
-		map.addLayer(markers);
-		
+		popopPanel.addTo(map);
+		first_Zindex -= 1;
+		popopPanel.setZIndex(first_Zindex);
+	}
+
+	var raster = L.tileLayer.wms(qgisUrl, {
+		layers: id,
+		//bbox: [49.036596, 7.647974, 49.177625, 7.912238],
+		format: 'image/png',
+		dpi: 96,
+		WIDTH:200,
+		HEIGHT:200,
+		tiled: true,
+		transparent: true,
+		maxZoom: 18,
+		minZoom: minzoom,
+		continuousWorld: true,
+		version: '1.3.0',
+		//tileSize: 16384
+		//updateWhenZooming: false
+		//noWrap: true
+	});
+	if (toggle == "checked"){
+		raster.addTo(map);
+	}
+	maplayers[title].push(raster);
+	first_Zindex -= 1;
+	raster.setZIndex(first_Zindex);
+}
+
+function closePopup(){
+	if (conf.options.popupLocation == "map"){
+		var popups = document.querySelectorAll('.leaflet-popup');
+		popups.forEach(function (pop) {
+			pop.style.display = 'none';
+		});
+	}else{
+		popupContainer.style.display = 'none';
+	}
+}
+
+function updateRightPopupPosition() {
+	var navHeight = document.getElementById('header').offsetHeight;
+	var navHeight = navHeight + 255;
+    popupContainer.style.top = navHeight + 'px';
+}
+
+  // Call the function on page load and window resize
+window.addEventListener('load', updateRightPopupPosition);
+window.addEventListener('resize', updateRightPopupPosition);
+
+function findValue(dictionary, targetValue) {
+	for (const key in dictionary) {
+		if (dictionary[key].id === targetValue) {
+			return key;
+		}
+	}
+	return null;
+}
+
+var first_Zindex = 200;
+let maplayers = {};
+let WFSs = {};
+
+async function processNestedDict(qgis_obj,nr,Parent){
+	return new Promise(async (resolve, reject) => {
+		obj = qgis_obj.elements[5].elements;
+		for (var key in obj) {
+			var position = nr + 1;
+			var parent = Parent;
+			if (parent == "Null"){
+				var parent = "#layertree";
+			}else{
+				var parent = "#"+parent+"_div"
+			}
+			var margin = position * 10;
+			if (obj[key]["name"] == "layer-tree-layer"){ 
+				var id = obj[key]["attributes"]["id"];
+				var name = findValue(conf.layers, id);
+				var title = conf.layers[name].title;
+				if (conf.layers[name].baseLayer == "False"){
+					if (conf.layers[name].displayInLegend == "True"){						
+						var geometryType = conf.layers[name].geometryType;
+						if (conf.layers[name].toggled == "True"){
+							var toggle = "checked";
+						} else {
+							var toggle = "";
+						}
+						
+						if (conf.layers[name].groupAsLayer == "True"){
+							var grouped = "grouped";
+						}else {
+							var grouped = "ungrouped";
+						}
+						
+						var popup = "";
+						if (conf.layers[name].popup == "True"){
+							if (conf.layers[name].popupSource == 'auto'){
+								var popup = conf.layers[name].popupSource;
+							}else if (conf.layers[name].popupSource == 'qgis'){
+								for (var p = 0; p < qgis_obj.elements[14].elements.length; p++) {
+									if (qgis_obj.elements[14].elements[p].elements[2].elements[0].text == id){
+										var popup = qgis_obj.elements[14].elements[p].elements.pop().elements[0].text;
+									}
+								}
+							}
+						}
+						var thisURL = domain+'/'+mainProject+'/'+QGISProject+'/getWFS/'+name;
+						var response = await fetchData(thisURL);
+						WFSs[title] = response;
+						await visualization (title, geometryType, toggle, id, response, grouped, popup);
+						
+						if ((obj[key].elements[0].elements[0].elements) && (obj[key].elements[0].elements[0].elements[0]["attributes"]["name"] == "showFeatureCount")){
+							var count = response.features.length;
+							var count = '['+count+']';
+						}else{
+							var count = "";
+						}
+						$(parent).append('<div class="inline-container"><span onclick="collapse(this)" id="'+title+'" class="triangle" style="margin-left:'+margin+'px;"></span><input type="checkbox" class="check" id="'+title+'" value ="'+p+'" onchange="toggleLayer(this);" '+toggle+'><p class="sidebar-layer" data-panel-id="'+title+'" onclick="panelClick(this)">'+title+' '+count+'</p></div>')
+						$(parent).append('<div value="'+title+'_div" class="content" id="'+title+'_div">');
+						
+					}else if (name in conf.locateByLayer){
+						var thisURL = domain+'/'+mainProject+'/'+QGISProject+'/getWFS/'+name;
+						var response = await fetchData(thisURL);
+						WFSs[title] = response;
+					}
+				}
+
+			} else if (obj[key]["name"] == "layer-tree-group") {
+				var groupName = obj[key]["attributes"]["name"];
+				if (conf.layers[groupName].toggled == "True"){
+					var toggle = "checked";
+				}else {
+					var toggle = "";
+				}
+				if ((conf.layers[groupName].baseLayer == "False") && (conf.layers[groupName].displayInLegend == "True")){
+					$(parent).append('<div class="inline-container"><span onclick="collapse(this)" id="'+groupName+'" class="triangle" style="margin-left:'+margin+'px;"></span><input type="checkbox" id="'+groupName+'" value ="'+p+'" class="groupcheck" onchange="toggleGroup(this);" '+toggle+'><p class="sidebar-group" data-panel-id="'+groupName+'" onclick="panelClick(this)"><strong>'+groupName+'</strong></p></div>');
+					$(parent).append('<div value="'+groupName+'_div" class="content" id="'+groupName+'_div">');
+					await processNestedDict(obj[key]["elements"], position,groupName);
+				}
+			}	
+		}
+		resolve(WFSs);
+	});
+};
+
+var qgs_layers = qgs.elements[1]; //.elements[5].elements;
+//processNestedDict(qgs_layers,0,"Null");
+
+//--------------------------------------------------------------------------------------------
+
+// Locater
+var locater = document.getElementById('DropdownContainer');
+locater.style.visibility = "hidden";
+
+function closeLocater(){
+	locater.style.visibility = "hidden";
+}
+
+var locateBtn = L.easyButton({
+    states: [{
+		icon: "fa-solid fa-magnifying-glass-location",
+        title: 'Locate by attribute',      
+		position: 'topright',
+		id: 'locateButton',
+        onClick: function() {       
+            if (locater.style.visibility == "hidden") {
+				locater.style.visibility = "visible";
+            }else {
+				locater.style.visibility = "hidden";
+            }
+        }       
+    }]
+});
+
+async function fetchAndProcessLocateData() {
+    try {
+        var WFSs = await processNestedDict(qgs_layers, 0, "Null");
+        
+        if (Object.keys(conf.locateByLayer).length !== 0) {
+            locateBtn.addTo(map);
+			var selectIndex = 0;
+			var locateBbox = {};
+            Object.entries(conf.locateByLayer).forEach(([k, v]) => {
+                var name = findValue(conf.layers, v['layerId']);
+				var title = conf.layers[name].title;
+				$('#locateDropdown').append('<select class="locateSelect" data-placeholder="' + title + '" onchange="handleLocating(this)"><option value=""></option></select>');
+				var targetFieldName = v['fieldName'];					
+				for (var i = 0; i < WFSs[title].features.length; i++) {
+					var feature = WFSs[title].features[i];
+					var fieldValue = feature.properties[targetFieldName];
+					$("#locateDropdown select:eq(" + selectIndex + ")").append('<option value="' +fieldValue+ '" >' + fieldValue + '</option>');
+					locateBbox[fieldValue] = feature.bbox;
+				}
+				selectIndex += 1;
+            });
+			$(document).ready(function () {
+				$('.locateSelect').select2({
+					allowClear: true
+				});
+			});
+			function handleLocating(selectElement) {
+				var selectedValue = selectElement.value;
+				if (selectedValue !== '') {
+					var featureBbox = locateBbox[selectedValue];
+					var featureBbox = [[featureBbox[1], featureBbox[0]],[featureBbox[3], featureBbox[2]]];
+					map.fitBounds(featureBbox);
+				}
+			}		
+			window.handleLocating = handleLocating;
+        }
 			
-	},
-		error: function (xhr,status, error){
-		alert("ERROR: " + error);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+fetchAndProcessLocateData();
+
+function updateLocaterPosition() {
+	var navHeight = document.getElementById('header').offsetHeight;
+	var navHeight = navHeight + 65;
+    locater.style.top = navHeight + 'px';
+}
+
+  // Call the function on page load and window resize
+window.addEventListener('load', updateLocaterPosition);
+window.addEventListener('resize', updateLocaterPosition);
+
+
+//------------------------------------------------------------------------------------------
+//var wmtsLayer = L.tileLayer('http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?MAP=C:/Users/mkheyrollahi/Downloads/221103-BBVPlanauskunftServer-v3.qgs&LAYER=br&FORMAT=image/png&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=default&TILEMATRIXSET=EPSG:4326&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
+//}).addTo(map);
+
+<!-- var qgisUrl = 'http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?MAP=C:/Users/mkheyrollahi/Downloads/221103-BBVPlanauskunftServer-v3.qgs'; -->
+
+<!-- var ign = new L.TileLayer.WMTS(qgisUrl,  -->
+								<!-- { -->
+                                   <!-- //layer: 'Ausbaugebiete MTK V10 15.11.22', -->
+								   <!-- layer: 'Bretten', -->
+                                   <!-- //style: "default", -->
+                                   <!-- tilematrixSet: "EPSG:3857", -->
+                                   <!-- format: "image/png", -->
+								   <!-- //transparent: true, -->
+                                   <!-- attribution: "dd", -->
+								   <!-- //minZoom: 14,  // Set the minimum zoom level -->
+									<!-- //maxZoom: 18  // Set the maximum zoom level -->
+									<!-- zIndex: 1000 -->
+                               <!-- } -->
+                              <!-- ); -->
+
+<!-- map.addLayer(ign); -->
+
+//-----------------------------------------------------------------------------------------
+// Layer tree function
+
+function toggleLayer(box) {
+	var boxId = box.id;
+	var layer = maplayers[boxId];
+	if (box.checked) {
+		for (var i=0; i < layer.length; i++) {
+			map.addLayer(layer[i]);
+		}
+	} else {
+		for (var i=0; i < layer.length; i++) {
+			map.removeLayer(layer[i]);
+		}
 	}
-	
-});
+}
 
-$(".layerbox").append('<ul id="mainstandort" class=ocbutton>');
-$("#mainstandort").append('<li><span class="caret"><input type="checkbox" class="check" name="markers" id="standort"  checked>Standorte</span>');
-//var cities = ["Adelsheim","Aglasterhausen","Fahrenbach","Mudau","Rosenberg"];
-//for (var i = 0; i < cities.length; i++) {
-//	$("#mainstandort li").append('<ul class="nested">')
-//	$("#mainstandort ul").append('<li><input type="checkbox" class="subcheck" style="margin-left:25px;" checked>'+cities[i]+'</li>')
-//}
-$('head').append("<style>#mainstandort .caret:before { color:#4169e1; }</style>");
+function toggleGroup(group) {
+	var groupId = group.id;
+	var controlledCheckboxes = document.querySelectorAll('[value="'+groupId+'"]');
 
+	controlledCheckboxes.forEach(function(box) {
+		box.checked = group.checked;
+		if (box.classList == "check"){
+			toggleLayer(box);
+		} else if (box.classList == "groupcheck"){
+			toggleGroup(box);
+		}
+	});
+}
 
-
-
-$(".layerbox").append('<ul id="maingemeinden" class=ocbutton>');
-$("#maingemeinden").append('<li><span class="caret"><input type="checkbox" class="check" id="gemeinden"  checked>Clustergemeinden</span>');
-   
-$.ajax({url:domain+'/get-layer/Sandbox4test_mh/polygon/"Clustergemeinden NOK V1 05.05.20"',
-	success: function(response){
-		//jsnpolys = JSON.parse(response);
-		lyrgem = L.geoJSON(response).addTo(map);
-		map.fitBounds(lyrgem.getBounds());
-		},
-		error: function (xhr,status, error){
-		alert("ERROR: " + error);
+function collapse(tri) { 
+	const triangleId = tri.id;
+	const subset = document.querySelector('div[value="'+triangleId+'_div"]');
+	if (subset.style.display === "none") {
+		tri.classList.remove('right');
+		subset.style.display = "block";
+	} else {
+		tri.classList.toggle('right');
+		subset.style.display = "none";
 	}
-});
+}
 
-
-//var cities = ["Adelsheim","Aglasterhausen","Fahrenbach","Mudau","Rosenberg"];
-
-<!-- for (var i = 0; i < cities.length; i++) { -->
-	<!-- $("#maingemeinden li").append('<ul class="nested">') -->
-	<!-- $("#maingemeinden ul").append('<li><input type="checkbox"  class="subcheck" style="margin-left:25px;" checked>'+cities[i]+'</li>') -->
-<!-- } -->
-$('head').append("<style>#maingemeinden .caret:before { color:#4169e1; }</style>");
-
-
-
-var lyrpoly;
-$.ajax({url:domain+'/get-layer/Sandbox4test_mh/polygon/"Ausbaugebiete_NOK_trial"',
-	success: function(response){
-		//jsnpolys = JSON.parse(response);
-		lyrpoly = L.geoJSON(response, {style:{color: 'red'}}).addTo(map);
-		},
-		error: function (xhr,status, error){
-		alert("ERROR: " + error);
-	}
-});
-
-$(".layerbox").append('<ul id="mainausbau" class=ocbutton>');
-$("#mainausbau").append('<li><span class="caret"><input type="checkbox" class="check" name = "lyrpoly" id="ausbau"  checked>Ausbaugebiete</span>');
-
-
-var lyrline;
- $.ajax({url:domain+'/get-layer/BBVGeoMaster/line/"Bautrassen NOK 230502 Archiv"',
-	success: function(response){
-		//jsnpolys = JSON.parse(response);
-		lyrline = L.geoJSON(response, {style:{color: '#FFEA00'}}).addTo(map);
-		},
-		error: function (xhr,status, error){
-		alert("ERROR: " + error);
-	}
-});
-
-$(".layerbox").append('<ul id="mainline" class=ocbutton>');
-$("#mainline").append('<li><span class="caret"><input type="checkbox" class="check" name = "lyrline" id="line"  checked>Interpolygone</span>');
-//-------------------------------------------------------------------------------------------------------testtest
-
-<!-- function symbology (feature){ -->
-	<!-- var fillColor, side=feature.properties.GEN; -->
-	<!-- if (side==='Adelsheim') fillColor = '#309e2d'; -->
-		<!-- else if (side==='Aglasterhausen') fillColor = '#e27f14'; -->
-		<!-- else if (side==='Fahrenbach') fillColor = '#2b74eb'; -->
-		<!-- else if (side==='Mudau') fillColor = '#eae42b'; -->
-		<!-- else if (side==='Rosenberg') fillColor = '#552d04'; -->
-		<!-- else fillColor = '#00ffff'; -->
-		<!-- return { color: fillColor, weight: 3.5, opacity: 0.5 }; -->
-<!-- }; -->
-
-<!-- function popUp (feature, geojson){ -->
-	<!-- var popupText="<h1 class='makebold'>Border: </h1>"+ -->
-	<!-- feature.properties.AGS+"<br/>"+ -->
-	<!-- "<h1 class='makebold'>Which Side</h1>"+ -->
-	<!-- feature.properties.GEN; -->
-	<!-- geojson.bindPopup(popupText); -->
- <!-- }; -->
- 
-
-
-<!-- var mysubcheck = {} -->
-
-<!-- $.ajax({url:'http://localhost:3000/users?db=Sandbox4test_mh&shape=polygon&crm=Clustergemeinden NOK V1 05.05.20', -->
-	<!-- success: function(response){ -->
-	
-		
-		<!-- jsnpolys = JSON.parse(response); -->
-		<!-- cities.forEach(function(city) { -->
-		<!-- lyrgem = L.geoJson(jsnpolys, { -->
-			<!-- style: symbology, -->
-			<!-- onEachFeature: popUp, -->
-			<!-- filter: function(feature, layer) { -->
-				<!-- if ((feature.properties.GEN).includes(city)){ -->
-					<!-- //return !cities.includes(feature.properties.GEN)==true; -->
-					<!-- return feature.properties.GEN == city; -->
-					<!-- //$("#maingemeinden li").append('<ul class="nested">'); -->
-					<!-- //$("#maingemeinden ul").append('<li><input type="checkbox"  class="subcheck" style="margin-left:25px;" checked>Other cities</li>'); -->
-					<!-- } -->
-				<!-- //else{ -->
-					<!-- //return ((feature.properties.GEN).includes(city)); -->
-					<!-- //$("#maingemeinden li").append('<ul class="nested">') -->
-	                <!-- //$("#maingemeinden ul").append('<li><input type="checkbox"  class="subcheck" style="margin-left:25px;" checked>'+cities[i]+'</li>') -->
-					<!-- //} -->
-					<!-- } -->
-
-			
-			
-			<!-- }).addTo(map); -->
-			<!-- mysubcheck[city] = lyrgem; -->
-			<!-- $("#maingemeinden li").append('<ul class="nested">') -->
-	        <!-- $("#maingemeinden ul").append('<li><input type="checkbox" value='+city+' class="subchecks" onchange="myfunc(this)" style="margin-left:25px;" checked>'+city+'</li>') -->
-			<!-- //togglelayer.addOverlay(lyrgem, city); -->
-			<!-- }) -->
-	<!-- }, -->
-		<!-- error: function (xhr,status, error){ -->
-		<!-- alert("ERROR: " + error); -->
-	<!-- } -->
-<!-- }); -->
-<!-- $('head').append("<style>#maingemeinden .caret:before { color:#4169e1; }</style>"); -->
-
-<!-- var toggler = document.getElementsByClassName("caret"); -->
-<!-- var i; -->
-
-
-<!-- for (i = 0; i < toggler.length; i++) { -->
-  <!-- //toggler[i].addEventListener("click", function () { -->
-  <!-- $(".caret").click( function () { -->
-    <!-- this.parentElement.querySelector(".nested").classList.toggle("active"); -->
-    <!-- this.classList.toggle("caret-down"); -->
-  <!-- }); -->
-<!-- } -->
-
-//var togglelayer = new L.control.layers(null, null,{collapsed: false}).addTo(map);
-//$('#keke').append(togglelayer.onAdd(map))
-
-//var togglelayer = L.control.layers(null, null,{collapsed: false}).addTo(map);
-
-
-//$('#keke').append(L.control.browserPrint(options).onAdd(map))
-
-
-
-//var togglelayer = L.control.layers(null, null,{collapsed: false}).addTo(map);
-
-	
-
-//var togglelayer = L.control.layers.tree(null, olt, {collapsed: false}).addTo(map);
-//$('#keke').append(togglelayer.onAdd(map))
-//
 
 //--------------------------------------------------------------------------
 
+// Tabs Management
+function opentabs(evt, tabName) {
+	// Declare all variables
+	var i, tabcontent, tablinks;
 
-function opentabs(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+	// Get all elements with class="tabcontent" and hide them
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+	// Get all elements with class="tablinks" and remove the class "active"
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+	// Show the current tab, and add an "active" class to the button that opened the tab
+	document.getElementById(tabName).style.display = "block";
+	evt.currentTarget.className += " active";
 }
 
 document.getElementById("defaulttab").click();
 
-//--------------------------------------------------------------------------
-//var ids = ["standort", "ausbau", "gemeinden"];
-//var layers = [markers,lyrpoly,lyrgem ];
+function openPermatabs(evt, tabName) {
+	// Declare all variables
+	var i, tabcontent, tablinks;
 
-$(".check").change(function() {
-  var layerClicked = $(this).attr("id");
+	// Get all elements with class="permacontent" and hide them
+	tabcontent = document.getElementsByClassName("permacontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
 
-  switch (layerClicked) {
-  
-    case "standort":
-      toggleLayer(this.checked, markers);
-      break;
-    case "ausbau":
-      toggleLayer(this.checked, lyrpoly);
-      break;
-	case "gemeinden":
-      toggleLayer(this.checked, lyrgem);
-      break;
-	case "line":
-      toggleLayer(this.checked, lyrline);
-      break;
-      // ...and so on...
- }
-});
-function toggleLayer(checked, layer) {
-  if (checked) {
-    map.addLayer(layer);
-  } else {
-    map.removeLayer(layer);
-  }
+	// Get all elements with class="permalinks" and remove the class "active"
+	tablinks = document.getElementsByClassName("permalinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+
+	// Show the current tab, and add an "active" class to the button that opened the tab
+	document.getElementById(tabName).style.display = "block";
+	evt.currentTarget.className += " active";
 }
 
-
-<!-- function myfunc(e) {  -->
-    <!-- var layerClicked = e.value; -->
-	<!-- if (e.checked == true) { -->
-		<!-- map.addLayer(mysubcheck[layerClicked]); -->
-    <!-- } else { -->
-        <!-- map.removeLayer(mysubcheck[layerClicked]); -->
-    <!-- }  -->
- <!-- }; -->
+document.getElementById("defaultlink").click();
 
 
 //--------------------------------------------------------------------------
+//measureControl
 options={
 	position: 'topleft',
 	primaryLengthUnit: 'meters', 
@@ -633,33 +1039,36 @@ options={
 }
 
 var measureControl = new L.Control.Measure(options);
-measureControl.addTo(map);
-
+if (("measure" in conf.options) && (conf.options.measure == "True")){
+	//L.Control.measureControl(options).addTo(map);
+	measureControl.addTo(map);
+};
 //--------------------------------------------------------------------------
 
+// Draw button
 
 var drawbtn = L.easyButton({
-    states: [{
-            //icon:      '<img src="http://localhost:3000/4692520.png" style="width:25px" >',  
-			icon:      '<img src="https://bbvnewgeoportal.onrender.com/4692520.png" style="width:25px" >', 
-            title:     'Draw ...',      
-			position: 'topleft',
-			id: 'app',
-            onClick: function() {       
-                var drawer = document.getElementsByClassName('leaflet-draw')[0];
-                if (drawer.style.display === 'none') {
-				 drawer.style.display = "block";
-                	}else {
+    states: [{ 
+		icon: "fa-solid fa-compass-drafting",
+		title:     'Draw ...',      
+		position: 'topleft',
+		id: 'dwbtn',
+		onClick: function() {
+			var drawer = document.getElementById('the-draw-control');
+			if (drawer.style.display === 'none') {
+				drawer.style.display = "block";
+			}else {
 				drawer.style.display = "none";
-            	}
-            }       
+			}
+		}       
     }]
 });
 
-drawbtn.addTo(map);
+if (("draw" in conf.options) && (conf.options.draw == "True")){
+	drawbtn.addTo(map);
+}
 
 
-//--------------------------------------------------------------------------
 
 var editableLayers = new L.FeatureGroup();
 map.addLayer(editableLayers);
@@ -720,26 +1129,34 @@ var options = {
 var drawControl = new L.Control.Draw(options);
 map.addControl(drawControl);
 
+drawControl._container.id = 'the-draw-control';
+
+var drawer = document.getElementById('the-draw-control');
+drawer.style.display = "none";
+
 map.on(L.Draw.Event.CREATED, function (e) {
 	var type = e.layerType,
 		layer = e.layer;
 
-	if (type === 'marker') {
-		layer.bindPopup('A popup!');
-	}
-	if (type === 'circle') {
-		layer.bindPopup('A popup!');
-	}
+	<!-- if (type === 'marker') { -->
+		<!-- layer.bindPopup('A popup!'); -->
+	<!-- } -->
+	<!-- if (type === 'circle') { -->
+		<!-- layer.bindPopup('A popup!'); -->
+	<!-- } -->
 
 	editableLayers.addLayer(layer);
 });
 
-//---------------------------------------------------------------------
-$(document).ready(function() {
-$(".easy-button-container button").trigger('click');
-});
+
+<!-- $(document).ready(function() { -->
+	<!-- if (("draw" in conf.options) && (conf.options.draw == "True")){ -->
+		<!-- $(".easy-button-container button").trigger('click'); -->
+	<!-- } -->
+<!-- }); -->
 //---------------------------------------------------------------------
 
+//Geolocation
 options ={
 	collapsed: false,
 	errorMessage: "Nothing found...",
@@ -749,11 +1166,438 @@ options ={
 	queryMinLength: 1,
 	position:"topright",
 }
-L.Control.geocoder(options).addTo(map);
+if (("geolocation" in conf.options) && (conf.options.geolocation == "True") && ("externalSearch" in conf.options)){
+	L.Control.geocoder(options).addTo(map);
+};
 
 //------------------------------------------------------------------------------------------
 
+//Coordinates panel
+var coordinatesPanel = document.getElementById('coordinatesPanel');
+coordinatesPanel.style.visibility = "hidden";
 
+var coordControl = new L.Control.Coordinates({decimals: 6});
+if (!("hideOverview" in conf.options) || (conf.options.hideOverview == "False")){
+	coordControl.addTo(map);
+	coordinatesPanel.style.visibility = "visible";
+	var coordElement = document.querySelector('.leaflet-control-coordinates');
+    coordElement.style.visibility = "hidden";
+}
+
+var LatTextbox = document.getElementById('coordLat');
+var LngTextbox = document.getElementById('coordLon');
+
+
+function convertToDMS(coord) {
+	var absoluteCoord = Math.abs(coord);
+	var degrees = Math.floor(absoluteCoord);
+	var minutes = Math.floor((absoluteCoord - degrees) * 60);
+	var seconds = ((absoluteCoord - degrees - minutes / 60) * 3600).toFixed(1);
+  
+	return degrees + '° ' + minutes + "' " + seconds + '"';
+}
+
+if (!("hideOverview" in conf.options) || (conf.options.hideOverview == "False")){
+	map.on('mousemove', function (e) {
+	  // Manually update the HTML content of the coordinates control
+		
+		var formattedCoordinates = L.Util.template(coordControl.options.labelTemplateLat + '<br>' + coordControl.options.labelTemplateLng, {
+			x: L.NumberFormatter.round(e.latlng.lng, coordControl.options.decimals),
+			y: L.NumberFormatter.round(e.latlng.lat, coordControl.options.decimals),
+		});
+
+		coordControl._container.innerHTML = formattedCoordinates;
+	  
+		var dmsLat = convertToDMS(e.latlng.lat);
+		var dmsLng = convertToDMS(e.latlng.lng);
+	  
+		proj4.defs("EPSG:4326", "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs");
+		proj4.defs("EPSG:25832", "+proj=utm +zone=32 +ellps=WGS84 +datum=WGS84 +units=m +no_defs");
+	  
+		var utm = proj4(proj4.defs('EPSG:4326'), proj4.defs('EPSG:25832'), [e.latlng.lng, e.latlng.lat]);
+
+		var coordSystem = document.getElementById('coordSystem').value;
+		if (coordSystem == 'degrees'){
+			LngTextbox.value = L.Util.formatNum(e.latlng.lng, coordControl.options.decimals);
+			LatTextbox.value = L.Util.formatNum(e.latlng.lat, coordControl.options.decimals);
+		}else if (coordSystem == 'meters'){
+			LngTextbox.value = utm[0].toFixed(2);
+			LatTextbox.value = utm[1].toFixed(2);
+		}else if (coordSystem == 'dms'){
+			LngTextbox.value = dmsLng+"E";
+			LatTextbox.value = dmsLat+"N";
+		}
+		
+	});
+}
+
+//---------------------------------------------------------------------------------------------
+//Scale bar
+var scaleControl = L.control.scale({
+	imperial: false,  // Display metric units instead of imperial
+	maxWidth: 300    // Set the maximum width of the scale bar
+});
+if (!("hideOverview" in conf.options) || (conf.options.hideOverview == "False")){
+	scaleControl.addTo(map);
+
+	var scaleContainer = document.getElementById('scale-container');
+	scaleContainer.appendChild(scaleControl.getContainer());
+}
+//---------------------------------------------------------------------------------------------
+
+// Share tab
+
+var currentURL = window.location.href;
+
+document.getElementById('linkTextBox').value = currentURL;
+
+  // Function to copy the link to the clipboard
+function copyLink(button) {
+	var textBox= button.value;
+	var textBox = document.getElementById(textBox);
+
+	textBox.select();
+	textBox.setSelectionRange(0, 99999); // For mobile devices
+	// Copy the text to the clipboard
+	document.execCommand('copy');
+}
+//-----------------------------------------------------------------------------------------------
+
+// Embed tab
+var widthText = document.getElementById("frameWidth");
+var heightText = document.getElementById("frameHeight");
+widthText.style.visibility = "hidden";
+heightText.style.visibility = "hidden";
+
+var width = 400;
+var height = 300;
+document.getElementById('frameTextBox').value = '<iframe width="'+width+'" height="'+height+'" frameborder="0" style="border:0" src="'+currentURL+'" allowfullscreen></iframe>'
+
+
+function handleDropdown() {
+	var dropdownContent = document.getElementById("dropdown-content");
+    var selectedValue = dropdownContent.value;
+	if (selectedValue == "small"){
+		widthText.style.visibility = "hidden";
+		heightText.style.visibility = "hidden";
+		var width = 400;
+		var height = 300;
+	}else if (selectedValue == "medium"){
+		widthText.style.visibility = "hidden";
+		heightText.style.visibility = "hidden";
+		var width = 600;
+		var height = 450;
+	}else if (selectedValue == "large"){
+		widthText.style.visibility = "hidden";
+		heightText.style.visibility = "hidden";
+		var width = 800;
+		var height = 600;
+	}else if (selectedValue == "customized"){
+		widthText.style.visibility = "visible";
+		heightText.style.visibility = "visible";
+		var width = 900;
+		var height = 700;
+		width = parseInt(widthText.value) || width;
+		height = parseInt(heightText.value) || height;
+	}
+	document.getElementById('frameTextBox').value = '<iframe width="'+width+'" height="'+height+'" frameborder="0" style="border:0" src="'+currentURL+'" allowfullscreen></iframe>'
+}
+heightText.addEventListener('input', handleDropdown);
+widthText.addEventListener('input', handleDropdown);
+
+//-----------------------------------------------------------------------------
+
+//Bookmark Tab
+let mark_bboxs = {}
+let count = 0;
+function addbookmark (){
+	var bookmarktext = document.getElementById('addBookmark');
+	if ((bookmarktext.value.trim() !== '')&&(count < 6)) {
+		$("#Bookmarks .permabox").append('<div class="abookmark" id="'+bookmarktext.value+'"><p>'+bookmarktext.value+'</p><button value="'+bookmarktext.value+'" onclick="zoomMark(this)"  title="Zoom ..."><i class="fas fa-search-plus"></i></button><button value="'+bookmarktext.value+'" onclick="deleteMark(this)"  title="Delete ..."><i class="fas fa-trash"></i></button></div>');
+		
+		count += 1;
+		
+		const bounds = map.getBounds();
+        var west = bounds.getWest();
+        var south = bounds.getSouth();
+        var east = bounds.getEast();
+        var north = bounds.getNorth();
+		mark_bboxs[bookmarktext.value] = [[south, west],[north, east]];
+		bookmarktext.value = '';
+	}
+}
+
+function deleteMark (btn){
+	var btnVal = btn.getAttribute("value");
+	var divToDelete = document.querySelector('.abookmark#'+btnVal);
+	divToDelete.remove();
+	count -= 1;
+}
+
+function zoomMark (btn){
+	var btnVal = btn.getAttribute("value");
+	map.fitBounds(mark_bboxs[btnVal]);
+}
+//----------------------------------------------------------------------------------
+// Layer Info Panel
+var layerPanel = document.getElementById('custom-panels');
+layerPanel.style.display = 'none';
+function closePanel(){
+	layerPanel.style.display = 'none';
+}
+
+var opacitySlider = document.getElementById('opacitySlider');
+var levelValuePanel = document.getElementById('levelValuePanel');
+
+opacitySlider.addEventListener('input', function() {
+    levelValuePanel.textContent = Math.round((opacitySlider.value)*100);
+});
+
+let OpaCollection = {};
+
+function panelClick(itm){
+	itmTitle = itm.getAttribute('data-panel-id');
+	panelName = document.getElementById('panelName');
+	
+	if (layerPanel.style.display == 'none'){
+		layerPanel.style.display = 'block';
+	}else if (itmTitle == panelName.textContent){
+		layerPanel.style.display = 'none';
+	}
+	
+	panelName.textContent  = itmTitle;
+	itmClass = itm.className;
+	
+	var opacityLabel = document.getElementById('opacity-panel')
+	if (itmClass == "sidebar-layer"){
+		document.getElementById('panelType').textContent = "Layer";
+		opacitySlider.style.visibility = "visible";
+		document.getElementById('opacityToHide').style.visibility = "visible";
+	
+		function zoomPanel(){
+			var itmBbox = WFSs[itmTitle]["bbox"];
+			var itmBbox = [[itmBbox[1], itmBbox[0]],[itmBbox[3], itmBbox[2]]];
+			map.fitBounds(itmBbox);
+		}
+		window.zoomPanel = zoomPanel;
+		
+		if (typeof OpaCollection[itmTitle] !== 'undefined') {
+			opacitySlider.value = OpaCollection[itmTitle];
+			levelValuePanel.textContent = Math.round((opacitySlider.value)*100);
+		}else{
+			opacitySlider.value = 1;
+			levelValuePanel.textContent = 100;
+		}
+		itmlayers = maplayers[itmTitle];
+		opacitySlider.addEventListener('input', function() {
+			var opacityValue = opacitySlider.value
+			for (var i=0; i < itmlayers.length; i++) {
+				try	{
+					itmlayers[i].setOpacity(opacityValue);
+					OpaCollection[itmTitle] = opacityValue;
+				}catch (error) {					
+				}
+			}
+		});
+		
+	}else if (itmClass == "sidebar-group"){
+		document.getElementById('panelType').textContent = "Group";
+		
+		opacitySlider.style.visibility = "hidden";
+		document.getElementById('opacityToHide').style.visibility = "hidden";
+		
+		var itemDiv = document.getElementById(itmTitle+'_div');
+		groupItmsbbox = [];
+		
+		function zoomPanel(){
+			// Find all <p> tags within the div
+			var paragraphs = itemDiv.querySelectorAll('p');
+			paragraphs.forEach(function(paragraph) {
+				if (paragraph.className == "sidebar-layer"){
+					var itmBbox = WFSs[paragraph.getAttribute('data-panel-id')]["bbox"];
+					var itmBbox = [[itmBbox[1], itmBbox[0]],[itmBbox[3], itmBbox[2]]];
+					groupItmsbbox.push(itmBbox)
+				}
+			});
+
+			var unionBoundingBox = L.latLngBounds();
+			groupItmsbbox.forEach(function(layerBbox) {
+				var layerBounds = L.latLngBounds(layerBbox);
+				unionBoundingBox.extend(layerBounds);
+			});
+			map.fitBounds(unionBoundingBox);
+		}
+		window.zoomPanel = zoomPanel;	
+	}
+}
+
+
+
+function updateSidePanelPosition() {
+    var sidebarWidth = document.getElementById('sidebar').offsetWidth;
+	var sidebarWidth = sidebarWidth + 65;
+    layerPanel.style.left = sidebarWidth + 'px';
+	
+	var navHeight = document.getElementById('header').offsetHeight;
+	var navHeight = navHeight + 14;
+    layerPanel.style.top = navHeight + 'px';
+}
+
+  // Call the function on page load and window resize
+window.addEventListener('load', updateSidePanelPosition);
+window.addEventListener('resize', updateSidePanelPosition);
+
+//--------------------------------------------------------------------------------
+// Projects tab
+var projectsDict;
+$.ajax({
+	type: "GET",
+    url: domain+'/projectsDict',
+    dataType: "json",
+	async: false,
+	success: function(data){
+        projectsDict = data;                
+    },
+	error: function() {
+        console.log('Error in AJAX request');
+    }
+});
+
+var projectsImg;
+$.ajax({
+	type: "GET",
+    url: domain+'/projectsImg',
+    dataType: "json",
+	async: false,
+	success: function(data){
+        projectsImg = data;                
+    },
+	error: function() {
+        console.log('Error in AJAX request');
+    }
+});
+
+
+Object.entries(projectsDict).forEach(([key, value]) => {
+	$("#projectTable").append('<tr class="projectHeader"><th><p>'+key+'</p></th></tr>');
+	for (var h=0; h < value.length; h++) {
+		valueLink = domain+'/'+key+'/'+value[h];
+		imgName = projectsImg[key][h];
+		if (imgName !== ''){ 
+			imgSource = "../"+key+"/"+imgName;
+			imgSource = encodeURIComponent(imgSource);
+		}else {
+			imgSource = "../without.jpg";
+		}
+		
+		var projectMainName;
+		$.ajax({
+			type: "GET",
+			url: domain+'/'+key+'/'+value[h]+'/getQgsData',
+			dataType: "json",
+			async: false,
+			success: function(data){
+				projectMainName = data;                
+			},
+			error: function() {
+				console.log('Error in AJAX request');
+			}
+		});
+		var projectMainName = projectMainName.elements[1].elements[16].elements[42].elements[0]["text"];
+		$("#projectTable").append('<tr><td><a href='+valueLink+' target="_blank"><img src='+imgSource+'></br><a>'+projectMainName+'</a></td></tr>');	
+	}
+});
+
+function searchProject() {
+	var input, filter, table, tr, td, i, txtValue;
+	input = document.getElementById("projectInput");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("projectTable");
+	tr = table.getElementsByTagName("tr");
+
+	for (i = 0; i < tr.length; i++) {
+		if (tr[i].classList.contains('projectHeader')) {
+			var headerVisible = false;
+
+			// Check if there are visible child td elements
+			for (var j = i + 1; j < tr.length && tr[j].classList.contains('projectHeader') === false; j++) {
+				td = tr[j].getElementsByTagName("td")[0];
+				if (td) {
+					txtValue = td.textContent || td.innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						headerVisible = true;
+						break;
+					}
+				}
+			}
+
+			// Set the display style based on the visibility of children
+			tr[i].style.display = headerVisible ? '' : 'none';
+		} else {
+			// For non-header rows, handle visibility based on the search filter
+			td = tr[i].getElementsByTagName("td")[0];
+			if (td) {
+				txtValue = td.textContent || td.innerText;
+				tr[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? '' : 'none';
+			}
+		}
+	}
+}
+
+//--------------------------------------------------------------------------------------
+// Information tab
+
+var QGISProject_decode = QGISProject.replace(new RegExp("%20", 'g'), " ");
+var projectIdx = projectsDict[mainProject].indexOf(QGISProject_decode);
+var infoImg = projectsImg[mainProject][projectIdx];
+
+if (infoImg !== ''){ 
+	var infoImgSource = "../"+mainProject+"/"+infoImg;
+	var infoImgSource = encodeURIComponent(infoImgSource);
+}else {
+	var infoImgSource = "../without.jpg";
+}
+$('#infobox').append('<table><tr><td><img src='+infoImgSource+'></td></tr></table>');
+
+
+$('#infobox').append('<h4>Title</h4>');
+$('#infobox').append('<p>'+servertitle+'</p>');
+
+var severAbstract = qgs.elements[1].elements[16].elements[40].elements[0]["text"];
+var severAbstract = severAbstract.split('\n');
+$('#infobox').append('<h4>Description</h4>');
+severAbstract.forEach(function(line) {
+	$('#infobox').append('<p>'+line+'</p>');
+});
+
+var projection = qgs.elements[1].elements[4].elements[0].elements[3].elements[0]["text"];
+$('#infobox').append('<h4>Projection</h4>');
+$('#infobox').append('<p>EPSG: '+projection+'</p>');
+
+var minx = qgs.elements[1].elements[16].elements[30].elements[0].elements[0]["text"];
+var miny = qgs.elements[1].elements[16].elements[30].elements[1].elements[0]["text"];
+var maxx = qgs.elements[1].elements[16].elements[30].elements[2].elements[0]["text"];
+var maxy = qgs.elements[1].elements[16].elements[30].elements[3].elements[0]["text"];
+$('#infobox').append('<h4>Extent</h4>');
+$('#infobox').append('<p>'+minx+', '+miny+', '+maxx+', '+maxy+'</p>');
+//-------------------------------------------------------------------------------------
+
+
+
+ <!-- function showPopup() { -->
+    <!-- // Create a popup content -->
+    <!-- var pContent = '<p>Your Popup Content</p>'; -->
+
+    <!-- // Create a LatLng object for the custom corner (e.g., bottom-right corner) -->
+    <!-- var customCornerLatLng = L.latLng(49.349506, 9.137535); -->
+
+    <!-- // Create and bind the popup to the map at the custom corner -->
+    <!-- var popUP = L.popup() -->
+        <!-- .setLatLng(customCornerLatLng) -->
+        <!-- .setContent(pContent) -->
+        <!-- .openOn(map); -->
+  <!-- } -->
+  <!-- showPopup(); -->
 </script>
 
 
