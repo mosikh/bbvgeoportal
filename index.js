@@ -132,7 +132,7 @@ app.get('/:subfolder/:qgisProject/getQgsConf', (req, res) => {
 
 //--------------------------------------------------------------------------------
 //var domain = "http://localhost:3000"
-var domain = "https://bbvnewgeoportal.onrender.com"
+
 
 app.get('/:subfolder/:qgisProject/getWFS/:layername', async (req, res) => {
 	const mainProject = req.params.subfolder;
@@ -141,6 +141,7 @@ app.get('/:subfolder/:qgisProject/getWFS/:layername', async (req, res) => {
 
 	const layerName = req.params.layername;
 	const encodedLayername = layerName.replace(/ /g, '_');
+	var domain = "https://bbvnewgeoportal.onrender.com"
 	const WfsUrl = domain+'/cgi-bin/qgis_mapserv.fcgi.exe?MAP='+qgsFilePath+'&SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&TYPENAME='+encodedLayername+'&OUTPUTFORMAT=application/json';
 	try {
     // Fetch WFS data from QGIS server
