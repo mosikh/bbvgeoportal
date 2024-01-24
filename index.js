@@ -11,11 +11,11 @@ const axios = require('axios');
 const convert = require('xml-js');
 //----------------------------------------------------------------------------------------
 
-app.use(express.static('public'))
+app.use(express.static('styles'))
 app.use(express.static('node_modules'))
 app.use(express.static('img'))
 app.use(express.static('projects'))
-//app.use(express.static(path.join(__dirname)));
+app.use(express.static('libraries'))
 //--------------------------------------------------------------------------------------------
 
 // Put all of the project names into a dict
@@ -106,7 +106,7 @@ app.get('/:subfolder/:qgisProject/getQgsData', (req, res) => {
 			return;
 		}
 	const qgs = convert.xml2js(data, {compact: false });
-	//console.log(qgs.elements[1].elements[14].elements[1].elements.pop().elements[0].text)
+	//console.log(qgs.elements[1].elements[16].elements[50].elements[1].elements[23].elements[0].text)
 	//console.log(qgs.elements[1].elements[14].elements[2].elements[2].elements[0].text)
 	res.json(qgs);
 	});
@@ -129,10 +129,9 @@ app.get('/:subfolder/:qgisProject/getQgsConf', (req, res) => {
 	});
 });
 
-
 //--------------------------------------------------------------------------------
-//var domain = "http://localhost:3000"
-
+//var domain = "http://localhost:9000"
+var domain = "https://bbvnewgeoportal.onrender.com";
 
 app.get('/:subfolder/:qgisProject/getWFS/:layername', async (req, res) => {
 	const mainProject = req.params.subfolder;
@@ -141,7 +140,6 @@ app.get('/:subfolder/:qgisProject/getWFS/:layername', async (req, res) => {
 
 	const layerName = req.params.layername;
 	const encodedLayername = layerName.replace(/ /g, '_');
-	var domain = "https://bbvnewgeoportal.onrender.com"
 	const WfsUrl = domain+'/cgi-bin/qgis_mapserv.fcgi.exe?MAP='+qgsFilePath+'&SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&TYPENAME='+encodedLayername+'&OUTPUTFORMAT=application/json';
 	try {
     // Fetch WFS data from QGIS server
@@ -166,8 +164,12 @@ router.get('/:subfolder/:qgisProject', function(req, res) {
 	if ((fs.existsSync(qgsFilePath)) && (fs.existsSync(qgsConfPath))) {
 		res.sendFile(path.join(__dirname + '/index.html'));
 	}else{
-		res.status(404).send('Project not found');
+		res.status(404).send('The QGIS project or its config file are not found');
 	}
+});
+
+router.get('/', function(req, res) {
+	res.sendFile(path.join(__dirname + '/wmtstest.html'));
 });
 
 

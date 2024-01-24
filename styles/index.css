@@ -20,25 +20,24 @@ body{
 }
 
 
+/* h4 { */
+	/* color: rgba(87,32,255) ; */
+	/* margin-top: 5px; */
+	/* margin-left:-22px; */
+	/* margin-bottom: 5px; */
+/* } */
+/* p{ */
+	/* color: white; */
+	/* font-size: 15px; */
+	/* margin-top: 5px; */
+	/* text-align: left; */
+	/* font-weight: bold; */
+/* } */
 
-h4 {
-	color: rgba(87,32,255) ;
-	margin-top: 5px;
-	margin-left:-22px;
-	margin-bottom: 5px;
-}
-p{
-	color: white;
-	font-size: 15px;
-	margin-top: 5px;
-	text-align: left;
-	font-weight: bold;
-}
-
- body> #sidebar {
+body> #sidebar {
     display: none;
 	will-change: transform;
-    }
+}
 
 
 .container-fluid {
@@ -46,8 +45,15 @@ p{
    width: 100%;
 }
 
+#map{
+	height:95vh;
+	width:100%;
+	margin: 0;
+}
+
 #sidebar {
 	background-color: #000080;
+	z-index:850;
 }
 #sidebar table{
 	width: 100%;
@@ -56,173 +62,174 @@ p{
 .mainbox{
 	position: relative;
 	width: 100%;
-	background-color: #00ffff;
+	background-color: #FFFFFF;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border-top: 5px solid #00ffff;
-	border-bottom: 5px solid #00ffff;
+	border-top: 5px solid #FFFFFF;
+	border-bottom: 5px solid #FFFFFF;
  }
 .mainbox input{
-	 margin-left: 10px;
-	 margin-right: 10px;
-	 margin-top: 5px;
-	 margin-bottom: 5px;
-  }
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 #basetiles{
 	width: 100%;
-	background-color: #00ffff;
+	background-color: #FFFFFF;
 	height: 30px;
 	margin-bottom: 20px;
  }
 
 
-.un {
-position: absolute;
-right:320px;
-top:3px;
-}
-.iom {
-position: absolute;
-left:30px;
-top:3px;
-}
-.un-name{
-position: absolute;
-right:40px ; 
-top: 3px;
-color: white;
-font-size: 30px;
-font-weight: bold;
-z-index: 3;
-}
-.title{
-position: absolute;
-left:80px ; 
-top: 3px;
-color: white;
-font-size: 30px;
-font-weight: bold;
-z-index: 3;
-}
+/* .un { */
+/* position: absolute; */
+/* right:320px; */
+/* top:3px; */
+/* } */
+/* .iom { */
+/* position: absolute; */
+/* left:30px; */
+/* top:3px; */
+/* } */
+/* .un-name{ */
+/* position: absolute; */
+/* right:40px ;  */
+/* top: 3px; */
+/* color: white; */
+/* font-size: 30px; */
+/* font-weight: bold; */
+/* z-index: 3; */
+/* } */
+/* .title{ */
+/* position: absolute; */
+/* left:80px ;  */
+/* top: 3px; */
+/* color: white; */
+/* font-size: 30px; */
+/* font-weight: bold; */
+/* z-index: 3; */
+/* } */
 
-.slidecontainer {
-  width: 80%;
-  margin-top:-50px;
-}
+/* .slidecontainer { */
+  /* width: 80%; */
+  /* margin-top:-50px; */
+/* } */
 
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 6px;
-  border-radius: 2px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 1;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  margin-top: 40px;
-  margin-left: 25px;
-}
+/* .slider { */
+  /* -webkit-appearance: none; */
+  /* width: 100%; */
+  /* height: 6px; */
+  /* border-radius: 2px; */
+  /* background: #d3d3d3; */
+  /* outline: none; */
+  /* opacity: 1; */
+  /* -webkit-transition: .2s; */
+  /* transition: opacity .2s; */
+  /* margin-top: 40px; */
+  /* margin-left: 25px; */
+/* } */
 
-.slider:hover {
-  opacity: 1;
-}
+/* .slider:hover { */
+  /* opacity: 1; */
+/* } */
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border: 0;
-  background-color: white;
-  cursor: pointer;
-  z-index: 20000; 
-}
+/* .slider::-webkit-slider-thumb { */
+  /* -webkit-appearance: none; */
+  /* appearance: none; */
+  /* width: 15px; */
+  /* height: 15px; */
+  /* border: 0; */
+  /* background-color: white; */
+  /* cursor: pointer; */
+  /* z-index: 20000;  */
+/* } */
 
-.slider::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
-  border: 0;
-  background-color: white;
-  cursor: pointer;
-  z-index: 20000;
-}
+/* .slider::-moz-range-thumb { */
+  /* width: 15px; */
+  /* height: 15px; */
+  /* border: 0; */
+  /* background-color: white; */
+  /* cursor: pointer; */
+  /* z-index: 20000; */
+/* } */
 .line{
-  width: 100%;
-  background-color: #00ffff;
+	width: 100%;
+	background-color: #FFFFFF;
 }
-.second-line{
-  width: 300px;
-  margin-top: 40px;
-}
-.range-labels {
-  margin: 0px -35px 20px;
-  padding: 0;
-  list-style: none;
-  margin-left: -15px;
-  }
-  .range-labels-tra {
-    position: absolute;
-  margin: 0px 0px;
-  padding: 0;
-  list-style: none;
+/* .second-line{ */
+  /* width: 300px; */
+  /* margin-top: 40px; */
+/* } */
+/* .range-labels { */
+  /* margin: 0px -35px 20px; */
+  /* padding: 0; */
+  /* list-style: none; */
+  /* margin-left: -15px; */
+  /* } */
+  /* .range-labels-tra { */
+    /* position: absolute; */
+  /* margin: 0px 0px; */
+  /* padding: 0; */
+  /* list-style: none; */
 
-  }
+  /* } */
 
-.li {
-    position: relative;
-    float: left;
-    text-align: center;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-} 
-.lii { 
-    position: relative;
-    float: right;
-    margin-left:145px;
-    text-align: center;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-  }
-.refrence{
-    color: rgb(78,95,31);
-    text-decoration: none;
-    }
-    .box{
-width: 80%;
-margin-top: 82px;
-height: 1150px;
-background-color: rgba(255,255,255,0.7);
-margin-left: 10%;
-display: inline-block
-}
-@media screen and (max-width: 1315px) {
-.box{
-  float: none;
-  display: block;
-  text-align: center;
-  margin-top: 0px;
-  height: 3000px;
-}
-}
+/* .li { */
+    /* position: relative; */
+    /* float: left; */
+    /* text-align: center; */
+    /* color: white; */
+    /* font-size: 14px; */
+    /* cursor: pointer; */
+/* }  */
+/* .lii {  */
+    /* position: relative; */
+    /* float: right; */
+    /* margin-left:145px; */
+    /* text-align: center; */
+    /* color: white; */
+    /* font-size: 14px; */
+    /* cursor: pointer; */
+  /* } */
+/* .refrence{ */
+    /* color: rgb(78,95,31); */
+    /* text-decoration: none; */
+    /* } */
+    /* .box{ */
+/* width: 80%; */
+/* margin-top: 82px; */
+/* height: 1150px; */
+/* background-color: rgba(255,255,255,0.7); */
+/* margin-left: 10%; */
+/* display: inline-block */
+/* } */
+/* @media screen and (max-width: 1315px) { */
+/* .box{ */
+  /* float: none; */
+  /* display: block; */
+  /* text-align: center; */
+  /* margin-top: 0px; */
+  /* height: 3000px; */
+/* } */
+/* } */
 
 .leaflet-control-geocoder-form input{
-   width: 200px !important;
-   background-color: #00ffff !important;
+	width: 200px !important;
+	background-color: #FFFFFF !important;
 }
 
 .leaflet-control-geocoder {
-	background-color: #00ffff !important;
+	background-color: #FFFFFF !important;
 }
 
 .leaflet-control-browser-print a{
-	background-color: #00ffff !important;
+	background-color: #FFFFFF !important;
 }
 
 .leaflet-control-browser-print ul{
-	background-color: #00ffff !important;
+	background-color: #FFFFFF !important;
 }
 
 .leaflet-control-browser-print ul:hover{
@@ -233,11 +240,9 @@ display: inline-block
 	color: #000080 !important;
 }
 
-
-
 .tab {
 	overflow: hidden;
-	background-color: #00ffff;
+	background-color: #FFFFFF;
 	display: flex;
 }
 
@@ -288,7 +293,7 @@ display: inline-block
 }
 
 .copyLinks{
-	border: 1px solid #00FFFF;
+	border: 1px solid #FFFFFF;
 	width: 80%;
 	height: 30px;
 }
@@ -358,7 +363,7 @@ display: inline-block
 }
 
 .leaflet-control-measure-toggle{
-	background-color: #00ffff !important;
+	background-color: #FFFFFF !important;
 }
 
 .leaflet-measure-resultpopup p{
@@ -368,7 +373,7 @@ display: inline-block
 }
 
 .leaflet-control-zoom a{
-	background-color: #00ffff !important;
+	background-color: #FFFFFF !important;
 }
 
 .leaflet-draw {
@@ -376,80 +381,78 @@ display: inline-block
 }
 
 .leaflet-draw a{
-	background-color: #00ffff !important;
+	background-color: #FFFFFF !important;
+	color: #000080 !important;
 }
 
 .easy-button-container button{
-	background-color: #00ffff !important;
+	background-color: #FFFFFF !important;
 }
 
+/* ul, .ocbutton { */
+  /* list-style-type: none; */
+/* } */
 
 
-ul, .ocbutton {
-  list-style-type: none;
-}
+/* .ocbutton { */
+  /* margin-left: 10px; */
+  /* padding: 0; */
+  /* margin-bottom: 5px; */
+/* } */
+
+/* .caret { */
+	/* cursor: pointer; */
+	/* -webkit-user-select: none; /* Safari 3.1+ */ */
+	/* -moz-user-select: none; /* Firefox 2+ */ */
+	/* -ms-user-select: none; /* IE 10+ */ */
+	/* user-select: none; */
+/* } */
+
+/* .caret::before { */
+  /* content: "\25B6"; */
+  /* color: #00ffff; */
+  /* display: inline-block; */
+  /* margin-right: 0px; */
+/* } */
+
+/* .caret-down::before { */
+  /* -ms-transform: rotate(90deg); /* IE 9 */ */
+  /* -webkit-transform: rotate(90deg); /* Safari */' */
+  /* transform: rotate(90deg);   */
+/* } */
 
 
-
-.ocbutton {
-  margin-left: 10px;
-  padding: 0;
-  margin-bottom: 5px;
-}
-
-.caret {
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none;
-}
-
-.caret::before {
-  content: "\25B6";
-  color: #00ffff;
-  display: inline-block;
-  margin-right: 0px;
-}
-
-.caret-down::before {
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Safari */'
-  transform: rotate(90deg);  
-}
-
-
-.nested {
-  display: none;
-}
+/* .nested { */
+  /* display: none; */
+/* } */
 
 .active {
-  display: block;
+	display: block;
 }
-.checked{
-	padding: 0;
-}
-.ocbutton ul li{
- margin-left: -17px;
-}
+/* .checked{ */
+	/* padding: 0; */
+/* } */
+/* .ocbutton ul li{ */
+ /* margin-left: -17px; */
+/* } */
 
 .mycluster{
 	color: #000000;
 	font-size: 18px;
 }
 .mycluster a{
-	background-color: #00ffff;
+	background-color: #FFFFFF;
 	border-radius: 50%;
 }
 
 #projectbox{
 	position: relative;
 	width: 100%;
-	background-color: #00ffff;
+	background-color: #FFFFFF;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border-top: 5px solid #00ffff;
-	border-bottom: 5px solid #00ffff;
+	border-top: 5px solid #FFFFFF;
+	border-bottom: 5px solid #FFFFFF;
 }
 
 
@@ -503,17 +506,19 @@ ul, .ocbutton {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 8.7px 5px 0 5px; /* Adjust size as needed */
-    border-color: #4169E1 transparent transparent transparent ; /* Adjust color as needed */
+    border-width: 7.7px 4px 0 4px; /* Adjust size as needed */
+    border-color: #000080 transparent transparent transparent ; /* Adjust color as needed */
     cursor: pointer;
 	margin-left: 10px;
 	transition: transform 0.1s ease-in-out; /* Add smooth transition */
 }
 
 .triangle.right {
-    border-width: 8.7px 5px 0 5px; /* Adjust size and direction (right) */
+    border-width: 7.7px 4px 0 4px; /* Adjust size and direction (right) */
     transform: rotate(-90deg); /* Rotate the triangle 90 degrees for the right direction */
+	border-color: #6495ED transparent transparent transparent ;
 }
+
 
 #infobox p {
 	color: #000;
@@ -527,7 +532,7 @@ ul, .ocbutton {
 #infobox h4 {
 	color: #000;
 	font-size: 14px;
-	padding-left: 30px;
+	padding-left: 10px;
 	margin-bottom: 5px;
 	font-weight: bold;
 	margin-top: 20px;
@@ -543,6 +548,7 @@ ul, .ocbutton {
 .inline-container{
 	display: flex; 
 	align-items: center;
+	border: 1px solid #FFFFFF;
 }
 
 .inline-container p {
@@ -557,6 +563,15 @@ ul, .ocbutton {
     width: 15px; /* Set the desired width */
     height: 15px; /* Set the desired height */
 }
+
+.legend{
+	display:none;
+}
+
+.sidebar-group{
+	font-weight:bold;
+}
+
 
 #custom-panels {
 	position: absolute;
@@ -584,12 +599,26 @@ ul, .ocbutton {
     cursor: pointer;
 	color: #000080;
     font-size: 15px; /* Adjust the font size as needed */
-	background-color: #00ffff;
+	background-color: #FFFFFF;
+}
+
+#layerPanel .abookmark p {
+	font-size: 15px;
+	font-weight:bold;
+	margin-top:5px;
+	margin-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+#layerPanel .mainbox {
+	margin-top: 15px !important;
+	margin-bottom: 5px !important;
 }
 
 #layerPanel .mainbox p {
 	color: #000;
-	font-size: 12px;
+	font-size: 14px;
 	padding-left: 15px;
 	padding-right: 10px;
 	text-align: justify;
@@ -599,7 +628,7 @@ ul, .ocbutton {
 #layerPanel .mainbox h4 {
 	color: #000;
 	font-size: 14px;
-	padding-left: 30px;
+	padding-left: 10px;
 	margin-bottom: 5px;
 	font-weight: bold;
 	margin-top: 10px;
@@ -607,7 +636,7 @@ ul, .ocbutton {
 
 #layerPanel .mainbox button {
 	margin-left: 12px;
-	background-color: #00ffff;
+	background-color: #FFFFFF;
 	color: #000080;
 }
 
@@ -655,7 +684,7 @@ ul, .ocbutton {
 
 #DropdownContainer {
 	position: absolute;
-	top: 110px;
+	top: 80px;
 	right: 12px; /* Adjust the left position based on the sidebar width */
 	width: 320px; /* Adjust the width as needed */
 	z-index: 1000;
@@ -668,13 +697,14 @@ ul, .ocbutton {
 	margin-left: 12px;
 	margin-top: 3px;
 	margin-bottom: 7px;
+	font-weight: bold;
 }
 .locateSelect{
 	width: 300px; 
 }
 
 .leaflet-control-boxzoom {
-	background-color: #00ffff !important;
+	background-color: #FFFFFF !important;
     width: 31px !important;
     height: 31px !important;
 
@@ -683,12 +713,13 @@ ul, .ocbutton {
 #coordinatesPanel {
 	position: absolute;
 	bottom: 20px;
-	right: 20px;
-	z-index: 1000;
+	right: 10px;
+	z-index: 850;
 	background-color: #000080;
 	display: flex;
     flex-direction: column;
     align-items: center;
+	width:330px;
 }
 
 .coordTextBox {
@@ -713,7 +744,7 @@ ul, .ocbutton {
 
 .popupHeader{
 	display: flex;
-	background-color: #000080 !important;
+	background-color: white !important;
 }
 
 .popupHeader button{
@@ -724,21 +755,26 @@ ul, .ocbutton {
 	top: 16px;
     right: 0px;
     cursor: pointer;
-	color: #000080;
+	color: white;
     font-size: 15px;
-	background-color: transparent;
-	border: 1px solid transparent;
+	background-color: white;
+	border: 1px solid white;
+	opacity:0;
 }
 
 .popupHeader p{
 	padding-top: 0px;
 	padding-bottom: 0px;
 	padding-left: 10px;
+	color: #000080;
+	font-size: 15px;
+	text-align: left;
+	font-weight: bold;
 }
 
 .popupTable{
-	background-color: #000080 !important;
-	color: white;
+	background-color: white !important;
+	color: #000080;
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-bottom: 10px;
@@ -753,86 +789,227 @@ ul, .ocbutton {
 	border-collapse: collapse; /* Collapse the borders into a single border */
 	width: 100%;
 	margin-top: -10px;
-	color: white !important;
+	color: #000080 !important;
 }
 
 /* Style for table rows */
 .popupTable table tr {
-	border: 2px solid white !important;
-	color: white !important;
+	border: 2px solid #000080 !important;
+	color: #000080 !important;
 }
 
 /* Style for table cells */
 .popupTable table td {
-	border: 2px solid white !important; 
+	border: 2px solid #000080 !important; 
 	padding: 8px;
-	color: white !important;
+	color: #000080 !important;
 }
 
 .popupTable table th {
-	border: 2px solid white !important; 
+	border: 2px solid #000080 !important; 
 	padding: 8px; 
-	color: white !important;
+	color: white;
 	font-size: 15px;
+	background-color: #4169E1;
 }
-
 
 .popupTable table tbody tr:nth-child(even) td{
-	background-color: #1434A4;
+	background-color: #00FFFF;
 	font-size: 13px;
+	color: #000080;
 }
 .popupTable table tbody tr:nth-child(odd) td{
-	background-color: #4169E1;
+	background-color: white;
 	font-size: 13px;
+	color: #000080;
 }
 .popupTable table tbody tr:nth-child(even) th{
-	background-color: #1434A4;
+	background-color: #00FFFF;
 	font-size: 13px;
+	color: #000080;
 }
 .popupTable table tbody tr:nth-child(odd) th{
-	background-color: #4169E1;
+	background-color: white;
 	font-size: 13px;
+	color: #000080;
 }
 
 .leaflet-popup-content-wrapper {
-    background: transparent !important;
+    background: rgba(255,0,0,0) !important;
+	box-shadow: 0 0 0 0 !important;
 }
 
 .leaflet-popup-content {
-    background: transparent !important;
-    color: transparent !important;
+    background: white !important;
 }
 
-.right-popup-container {
-    position: absolute;
-    top: 300px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-	z-index: 1000;
-	display: none;
+.leaflet-popup-close-button {
+    top: 12px !important;
+    right: 30px !important;
+	color: #000080;
 }
 
-.right-popup-container button{
+#map .mini-popup-container {
     position: absolute;
-	float: right;
+    top: 250px;
+    right: 0px;
+	z-index: 900; 
+	width: 30%;
+	overflow-y: auto;
+}
+
+
+#map .mini-popup-container .popupHeader button{
+    position: absolute;
 	width: 25px;
 	height: 25px;
 	top: 10px;
-    right: 10px;
+    right: 20px;
     cursor: pointer;
 	color: #000080;
     font-size: 15px;
 	background-color: white;
 	border: 1px solid  #000080;
+	opacity:1 !important;
 }
 
-.right-popup-container p{
+.mini-popup-container p{
 	padding-top: 10px;
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-bottom: 0px;
+	display: inline-block;
 }
 
+.right-popup-container {
+	position: absolute;
+	right:0;
+	height:95vh;
+	bottom:0;
+	width:20%;
+	overflow: hidden;
+}
 
+.right-popup-container .popupTable{
+	max-height: 95% !important;
+	overflow-y: auto;
+}
 
+.right-popup-container .popupHeader button{
+    position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 10px;
+    right: 5px;
+    cursor: pointer;
+	color: #000080;
+    font-size: 15px;
+	background-color: white;
+	border: 1px solid  #000080;
+	opacity:1 !important;
+}
 
+.right-popup-container .popupHeader p{
+	padding-top: 10px;
+}
+
+#map .bottom-popup-container {
+	position: absolute;
+	right:0;
+	height:25%;
+	bottom:30px;
+	width:100%;
+	z-index: 900;
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
+}
+
+#map .bottom-popup-container:hover {
+    /* Increase the opacity on hover */
+    opacity: 1;
+}
+
+#map .bottom-popup-container .popupTable{
+	max-height: 90% !important;
+	overflow: auto;
+}
+
+#map .bottom-popup-container .popupHeader button{
+    position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 5px;
+    right: 20px;
+    cursor: pointer;
+	color: #000080;
+    font-size: 15px;
+	background-color: white;
+	border: 1px solid  #000080;
+	opacity:1 !important;
+}
+#map .bottom-popup-container .popupHeader p{
+    padding-top: 10px;
+}
+
+.left-popup-container .popupTable{
+	max-height: 100% !important;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.left-popup-container .popupHeader button{
+	color: white;
+	cursor: not-allowed;
+}
+
+.left-popup-container .popupHeader p{
+	padding-top: 10px;
+}
+
+#popupBox{
+	border: 0px;
+}
+
+.grid-print-container {
+    grid-template: auto 1fr auto / 1fr;
+    background-color: white;
+}
+
+.grid-map-print {
+    grid-row: 1;
+}
+
+.sub-content {
+    grid-row: 5;
+    padding-left: 10px;
+	display: none;
+}
+.sub-content p{
+    color:#000080;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+.sub-content h4{
+    color:#000080;
+}
+
+.sub-content table{
+    width: 100%;
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+}
+
+.sub-content td {
+	text-align: center;
+	padding: 0;
+}
+
+.swal2-title{
+	color: #000080;
+}
+
+.leaflet-div-icon{
+	display: none;
+}
 
